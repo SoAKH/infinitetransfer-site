@@ -10,3 +10,5 @@ Site du service de chauffeur privé VTC Infinite Transfer (Marseille & Provence)
 - `assets/` : feuille de style et scripts partagés.
 
 Hébergement : Netlify (commande `python3 build.py`, dossier `public`). Chaque commit sur `main` met le site à jour.
+
+Aperçu : chaque mise à jour est visible sur l’adresse Netlify du projet avant le branchement du domaine.
