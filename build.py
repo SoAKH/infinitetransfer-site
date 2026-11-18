@@ -425,7 +425,7 @@ def build_redirects():
         l = l.strip()
         if l and not l.startswith("#"):
             lines.append(f"{l}  {old_target(l)}  301!")
-    lines += ["//tarifs  /contact.html  301!", "/archives-*  /guide.html  301!", "/details-*  /guide.html  301!"]
+    lines += ["/archives-*  /guide.html  301!", "/details-*  /guide.html  301!"]
     open(os.path.join(OUT, "_redirects"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
     return len(lines)
 
