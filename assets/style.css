@@ -325,3 +325,11 @@ a.svc:hover h3{color:#8a6f3c}
   #menu > li{display:flex;align-items:center;height:24px}
   #menu > li > a,#menu > li > button{display:inline-flex;align-items:center;height:24px;line-height:1;padding:0}
 }
+
+/* Logo */
+.brand{flex-direction:row!important;align-items:center;gap:14px}
+.brand-icon{width:54px;height:auto;display:block}
+.brand-txt{display:flex;flex-direction:column;line-height:1}
+.foot-logo{display:inline-block;margin-bottom:24px}
+.foot-logo img{width:180px;height:auto;display:block}
+@media (max-width:420px){.brand-icon{width:42px}.brand b{font-size:1.25rem}}

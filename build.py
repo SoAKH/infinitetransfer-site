@@ -109,6 +109,7 @@ ORG = {"@type": "LocalBusiness", "@id": BASE_URL + "/#entreprise", "name": "Infi
        "description": "Chauffeur privé VTC à Marseille et en Provence : transferts aéroport, gares, port de croisière, événements, affaires.",
        "url": BASE_URL + "/", "telephone": "+33767123512", "email": "contact@infinitetransfer.eu",
        "areaServed": ["Marseille", "Aix-en-Provence", "Provence-Alpes-Côte d'Azur"],
+       "logo": BASE_URL + "/assets/img/icon-512.png", "image": BASE_URL + "/assets/img/og-image.jpg",
        "sameAs": ["https://www.instagram.com/infinite.transfer/"], "priceRange": "€€"}
 
 def nav(root, current):
@@ -119,7 +120,7 @@ def nav(root, current):
         return f'<li><a href="{root}{href}"{cur}>{label}</a></li>'
     return f'''<header class="top">
   <nav class="wrap nav" aria-label="Navigation principale">
-    <a class="brand" href="{root}index.html"><b>INFINITE</b><small>Transfer · Marseille</small></a>
+    <a class="brand" href="{root}index.html" aria-label="Infinite Transfer, accueil"><img class="brand-icon" src="{root}assets/img/logo-icone.png" alt="" width="54" height="21"><span class="brand-txt"><b>INFINITE</b><small>Transfer · Marseille</small></span></a>
     <ul id="menu">
       <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="subServices">Services</button><ul class="sub" id="subServices">{sub}</ul></li>
       {item("index.html#flotte", "Flotte", "flotte")}
@@ -143,7 +144,7 @@ def footer(root):
   <div class="wrap">
     <div class="f-grid">
       <div>
-        <a class="brand" href="{root}index.html" style="margin-bottom:22px"><b>INFINITE</b><small>Transfer · Marseille</small></a>
+        <a href="{root}index.html" class="foot-logo"><img src="{root}assets/img/logo-infinite-transfer.png" alt="Infinite Transfer, personal driver" width="180" height="98"></a>
         <p style="max-width:28em">Chauffeur privé VTC haut de gamme à Marseille et en Provence. Transferts aéroport, gares, croisières, affaires et événements.</p>
       </div>
       <div><h4>Services</h4><ul>{svc}</ul></div>
@@ -179,6 +180,9 @@ def page(path, title, description, body, current="", jsonld=None):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{canonical}">
+<meta property="og:image" content="{BASE_URL}/assets/img/og-image.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="{root}assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="{root}assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
