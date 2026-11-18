@@ -319,3 +319,9 @@ footer a:hover{color:var(--or-clair)}
 a.svc{text-decoration:none;color:inherit}
 a.svc h3{transition:color .2s}
 a.svc:hover h3{color:#8a6f3c}
+
+/* Alignement précis des entrées du menu (ordinateur) */
+@media (min-width:1061px){
+  #menu > li{display:flex;align-items:center;height:24px}
+  #menu > li > a,#menu > li > button{display:inline-flex;align-items:center;height:24px;line-height:1;padding:0}
+}
