@@ -158,7 +158,7 @@ def footer(root):
   </div>
 </footer>'''
 
-def page(path, title, description, body, current="", jsonld=None):
+def page(path, title, description, body, current="", jsonld=None, image=None):
     depth = path.count("/")
     root = "../" * depth
     canonical = BASE_URL + "/" + ("" if path == "index.html" else path)
@@ -180,7 +180,7 @@ def page(path, title, description, body, current="", jsonld=None):
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{BASE_URL}/assets/img/og-image.jpg">
+<meta property="og:image" content="{BASE_URL}/{image or "assets/img/og-image.jpg"}">
 <link rel="icon" type="image/png" sizes="32x32" href="{root}assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="{root}assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -217,7 +217,11 @@ def crumbs_ld(items):
 def post_cards(arts, root, light=False):
     if not arts:
         return ""
-    cards = "".join(f'''<a class="post" href="{root}articles/{a["slug"]}.html"><small>{esc(SVC[a["category"]]["short"])} · {fr_date(a["date"])}</small><h3>{esc(a["title"])}</h3><p>{esc(a["description"])}</p><span class="more">Lire l'article</span></a>''' for a in arts)
+    def pic(a):
+        if a.get("image"):
+            return f'<div class="post-img"><img src="{root}{a["image"]}" alt="{esc(a.get("image_alt", a["title"]))}" loading="lazy" width="600" height="400"></div>'
+        return f'<div class="post-img post-img-empty"><img src="{root}assets/img/logo-icone.png" alt="" width="120" height="46"></div>'
+    cards = "".join(f'''<a class="post" href="{root}articles/{a["slug"]}.html">{pic(a)}<small>{esc(SVC[a["category"]]["short"])} · {fr_date(a["date"])}</small><h3>{esc(a["title"])}</h3><p>{esc(a["description"])}</p><span class="more">Lire l'article</span></a>''' for a in arts)
     return f'<div class="posts">{cards}</div>'
 
 def faq_html(faq, light=True):
@@ -306,6 +310,9 @@ def build_article(a, arts):
     if related:
         rel_html = f'''<section class="light" style="padding-top:0"><div class="wrap"><div class="head"><div><span class="label">À lire aussi</span><h2>Sur le même <em>thème.</em></h2></div></div>{post_cards(related, "{{root}}", True)}</div></section>'''
     items = [("Accueil", "index.html"), (s["nav"], s["slug"] + ".html"), (a["title"], "")]
+    figure = ""
+    if a.get("image"):
+        figure = f'<figure class="art-fig"><img src="{{{{root}}}}{a["image"]}" alt="{esc(a.get("image_alt", a["title"]))}" width="1200" height="800"></figure>'
     body = f'''
 <section class="page-hero">
   <div class="wrap">
@@ -327,7 +334,7 @@ def build_article(a, arts):
         <a href="{{{{root}}}}{s["slug"]}.html" style="font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#7a5f2e">Découvrir le service →</a>
       </div>
     </aside>
-    <article class="prose">{markdown(a["md"])}</article>
+    <article class="prose">{figure}{markdown(a["md"])}</article>
   </div>
 </section>
 {rel_html}
@@ -335,7 +342,9 @@ def build_article(a, arts):
     ld = [ORG, {"@type": "BlogPosting", "headline": a["title"], "description": a["description"], "datePublished": a["date"].isoformat(),
                 "inLanguage": "fr-FR", "author": {"@id": ORG["@id"]}, "publisher": {"@id": ORG["@id"]},
                 "mainEntityOfPage": BASE_URL + "/" + path}, crumbs_ld(items)]
-    return page(path, f'{a["title"]} | Infinite Transfer', a["description"], body, current=a["category"], jsonld=ld)
+    if a.get("image"):
+        ld[1]["image"] = BASE_URL + "/" + a["image"]
+    return page(path, f'{a["title"]} | Infinite Transfer', a["description"], body, current=a["category"], jsonld=ld, image=a.get("image"))
 
 def build_guide(arts):
     groups = ""

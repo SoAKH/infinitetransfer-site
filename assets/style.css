@@ -341,3 +341,15 @@ a.svc:hover h3{color:#8a6f3c}
 .ac-list li small{font-size:.78rem;color:var(--gris)}
 .ac-list li:hover,.ac-list li.on{background:rgba(184,154,94,.14)}
 .ac-list li:hover span,.ac-list li.on span{color:var(--or-clair)}
+
+/* Photos des articles */
+.post-img{aspect-ratio:3/2;overflow:hidden;margin:0 0 4px;background:#16171a}
+.post{border-top:0;padding-top:0}
+.post-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.post:hover .post-img img{transform:scale(1.04)}
+.post-img-empty{display:grid;place-items:center;background:radial-gradient(circle at 70% 20%,rgba(184,154,94,.25),transparent 60%),#16171a;border-bottom:1px solid var(--or)}
+.post-img-empty img{width:34%;height:auto;opacity:.85}
+.post:hover .post-img-empty img{transform:none}
+.post-img + small{margin-top:10px}
+.art-fig{margin:0 0 40px}
+.art-fig img{width:100%;height:auto;display:block}
