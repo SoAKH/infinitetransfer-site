@@ -1,0 +1,46 @@
+<section class="quote-sec" id="devis" style="border-top:0">
+  <div class="wrap q-grid">
+    <div class="intro">
+      <span class="label">Devis gratuit</span>
+      <h2 style="margin-top:22px">Réservez <em>votre chauffeur.</em></h2>
+      <p>Complétez votre demande : elle est préparée pour un envoi par WhatsApp ou par e-mail. Pour un départ imminent, appelez-nous directement.</p>
+      <div class="coords">
+        <div><small>Mobile &amp; WhatsApp</small><a href="tel:+33767123512">+33 7 67 12 35 12</a></div>
+        <div><small>Ligne fixe</small><a href="tel:+33469001713">+33 4 69 00 17 13</a></div>
+        <div><small>E-mail</small><a href="mailto:contact@infinitetransfer.eu">contact@infinitetransfer.eu</a></div>
+      </div>
+    </div>
+
+    <form class="quote" id="quote" novalidate>
+      <div class="fld"><label for="from">Lieu de prise en charge</label><input id="from" placeholder="Adresse, aéroport, gare…"></div>
+      <div class="fld"><label for="to">Destination</label><input id="to" placeholder="Adresse, hôtel, ville…"></div>
+      <div class="fld"><label for="date">Date</label><input id="date" type="date"></div>
+      <div class="fld"><label for="time">Heure</label><input id="time" type="time"></div>
+      <div class="fld"><label for="pax">Passagers</label>
+        <select id="pax"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8+</option></select></div>
+      <div class="fld"><label for="bags">Valises</label>
+        <select id="bags"><option>0</option><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8 et plus</option></select></div>
+      <div class="fld"><label for="name">Nom complet</label><input id="name" autocomplete="name"></div>
+      <div class="fld"><label for="phone">Téléphone</label><input id="phone" type="tel" autocomplete="tel"></div>
+      <div class="full check"><input type="checkbox" id="seat"><label for="seat">J'ai besoin d'un siège auto pour enfant</label></div>
+      <div class="fld full"><label for="msg">Précisions</label><textarea id="msg" placeholder="Numéro de vol ou de train, âge de l'enfant, trajet retour…"></textarea></div>
+      <p class="err" id="err" role="alert" hidden></p>
+      <div class="q-foot">
+        <small>Votre tarif vous est confirmé par écrit avant toute réservation. Aucun paiement en ligne.</small>
+        <button class="btn btn-or" type="submit">Préparer ma demande
+          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h15M11 1l4 4-4 4"/></svg></button>
+      </div>
+      <div class="result" id="result" aria-live="polite">
+        <span class="t">Votre demande est prête.</span>
+        <pre id="summary"></pre>
+        <div class="acts">
+          <a class="btn btn-or" id="waLink" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+          <a class="btn btn-line" id="mailLink" href="#">Envoyer par e-mail</a>
+          <button class="btn btn-line" type="button" id="copyBtn">Copier le texte</button>
+        </div>
+        <small>Si l'envoi ne s'ouvre pas, copiez le texte et adressez-le au +33 7 67 12 35 12 ou à contact@infinitetransfer.eu.</small>
+      </div>
+    </form>
+  </div>
+</section>
+
