@@ -91,9 +91,7 @@
     'Aéroport Marseille Provence, 13700 Marignane',
     'Gare Marseille Saint-Charles, 13001 Marseille',
     'Gare Aix-en-Provence TGV, 13100 Aix-en-Provence',
-    'Terminal de croisière MPCT, 13016 Marseille',
-    'Parc Chanot, 13008 Marseille',
-    'Vieux-Port, 13001 Marseille'
+    'Terminal de croisière MPCT, 13016 Marseille'
   ];
   const API = 'https://data.geopf.fr/geocodage/search?autocomplete=1&lat=43.2965&lon=5.3698&q=';
   const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
