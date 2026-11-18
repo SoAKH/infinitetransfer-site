@@ -112,7 +112,8 @@ ORG = {"@type": "LocalBusiness", "@id": BASE_URL + "/#entreprise", "name": "Infi
        "sameAs": ["https://www.instagram.com/infinite.transfer/"], "priceRange": "€€"}
 
 def nav(root, current):
-    sub = "".join(f'<li><a href="{root}{s["slug"]}.html"{" aria-current=\"page\"" if current == s["slug"] else ""}>{esc(s["nav"])}</a></li>' for s in SERVICES)
+    cur_attr = ' aria-current="page"'
+    sub = "".join(f'<li><a href="{root}{s["slug"]}.html"{cur_attr if current == s["slug"] else ""}>{esc(s["nav"])}</a></li>' for s in SERVICES)
     def item(href, label, key):
         cur = ' aria-current="page"' if current == key else ""
         return f'<li><a href="{root}{href}"{cur}>{label}</a></li>'
@@ -160,6 +161,7 @@ def page(path, title, description, body, current="", jsonld=None):
     depth = path.count("/")
     root = "../" * depth
     canonical = BASE_URL + "/" + ("" if path == "index.html" else path)
+    robots = '<meta name="robots" content="noindex">' if NOINDEX else ""
     ld = ""
     if jsonld:
         ld = '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@graph": jsonld}, ensure_ascii=False) + "</script>"
@@ -170,7 +172,7 @@ def page(path, title, description, body, current="", jsonld=None):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
-<link rel="canonical" href="{canonical}">{'<meta name="robots" content="noindex">' if NOINDEX else ""}
+<link rel="canonical" href="{canonical}">{robots}
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Infinite Transfer">
