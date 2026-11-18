@@ -84,3 +84,80 @@
     catch (x) { b.textContent = 'Sélectionnez le texte'; }
   });
 })();
+
+// Suggestions d'adresses (service gratuit de la Géoplateforme IGN, France entière, résultats proches de Marseille en premier)
+(function () {
+  const FAV = [
+    'Aéroport Marseille Provence, 13700 Marignane',
+    'Gare Marseille Saint-Charles, 13001 Marseille',
+    'Gare Aix-en-Provence TGV, 13100 Aix-en-Provence',
+    'Terminal de croisière MPCT, 13016 Marseille',
+    'Parc Chanot, 13008 Marseille',
+    'Vieux-Port, 13001 Marseille'
+  ];
+  const API = 'https://data.geopf.fr/geocodage/search?autocomplete=1&lat=43.2965&lon=5.3698&q=';
+  const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+  function attach(input) {
+    const box = document.createElement('ul');
+    box.className = 'ac-list'; box.id = input.id + '-ac'; box.setAttribute('role', 'listbox'); box.hidden = true;
+    input.parentElement.classList.add('ac-wrap');
+    input.parentElement.appendChild(box);
+    input.setAttribute('role', 'combobox'); input.setAttribute('aria-autocomplete', 'list');
+    input.setAttribute('aria-controls', box.id); input.setAttribute('aria-expanded', 'false'); input.autocomplete = 'off';
+    let items = [], active = -1, timer, seq = 0;
+
+    function render(list) {
+      items = list; active = -1;
+      box.innerHTML = list.map((t, i) => {
+        const parts = t.split(/, (?=\d{5} )/);
+        return `<li role="option" id="${box.id}-${i}" data-i="${i}"><span>${parts[0]}</span>${parts[1] ? `<small>${parts[1]}</small>` : ''}</li>`;
+      }).join('');
+      box.hidden = !list.length; input.setAttribute('aria-expanded', String(!!list.length));
+    }
+    function pick(i) {
+      if (i < 0 || !items[i]) return;
+      input.value = items[i]; render([]);
+      input.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+    function highlight(i) {
+      active = (i + items.length) % items.length;
+      [...box.children].forEach((li, k) => li.classList.toggle('on', k === active));
+      input.setAttribute('aria-activedescendant', box.id + '-' + active);
+    }
+    async function search(q) {
+      const my = ++seq, nq = norm(q);
+      const fav = FAV.filter(f => norm(f).includes(nq));
+      if (q.length < 3) { render(q ? fav : FAV); return; }
+      try {
+        const [a, p] = await Promise.all([
+          fetch(API + encodeURIComponent(q) + '&limit=5').then(r => r.json()),
+          fetch(API + encodeURIComponent(q) + '&limit=3&index=poi').then(r => r.json())
+        ]);
+        if (my !== seq) return;
+        const poi = (p.features || []).map(f => {
+          const pr = f.properties, city = [].concat(pr.city || [])[0], pc = [].concat(pr.postcode || [])[0];
+          return pr.toponym ? `${pr.toponym}${pc && city ? `, ${pc} ${city}` : ''}` : null;
+        }).filter(Boolean);
+        const addr = (a.features || []).map(f => {
+          const pr = f.properties;
+          return pr.type === 'municipality' ? `${pr.city}, ${pr.postcode}` : (pr.postcode ? `${pr.name}, ${pr.postcode} ${pr.city}` : pr.label);
+        });
+        const seen = new Set();
+        render([...fav, ...poi, ...addr].filter(t => !seen.has(norm(t)) && seen.add(norm(t))).slice(0, 8));
+      } catch (e) { render(fav); }
+    }
+    input.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(() => search(input.value.trim()), 220); });
+    input.addEventListener('focus', () => { if (!input.value.trim()) render(FAV); });
+    input.addEventListener('keydown', e => {
+      if (box.hidden) return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); highlight(active + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); highlight(active - 1); }
+      else if (e.key === 'Enter' && active >= 0) { e.preventDefault(); pick(active); }
+      else if (e.key === 'Escape') { render([]); }
+    });
+    box.addEventListener('mousedown', e => { const li = e.target.closest('li'); if (li) { e.preventDefault(); pick(+li.dataset.i); } });
+    input.addEventListener('blur', () => setTimeout(() => render([]), 120));
+  }
+  ['qFrom', 'qTo', 'from', 'to'].forEach(id => { const el = document.getElementById(id); if (el) attach(el); });
+})();

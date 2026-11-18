@@ -333,3 +333,11 @@ a.svc:hover h3{color:#8a6f3c}
 .foot-logo{display:inline-block;margin-bottom:24px}
 .foot-logo img{width:180px;height:auto;display:block}
 @media (max-width:420px){.brand-icon{width:42px}.brand b{font-size:1.25rem}}
+
+/* Liste de suggestions d'adresses */
+.ac-wrap{position:relative}
+.ac-list{position:absolute;z-index:60;top:100%;left:0;right:0;margin:4px 0 0;padding:6px 0;list-style:none;background:#1b1c20;border:1px solid rgba(184,154,94,.45);box-shadow:0 18px 40px -12px rgba(0,0,0,.7);max-height:320px;overflow-y:auto}
+.ac-list li{padding:10px 16px;cursor:pointer;display:flex;flex-direction:column;gap:1px;font-size:.95rem;color:#e9e7e3;font-weight:400;line-height:1.35}
+.ac-list li small{font-size:.78rem;color:var(--gris)}
+.ac-list li:hover,.ac-list li.on{background:rgba(184,154,94,.14)}
+.ac-list li:hover span,.ac-list li.on span{color:var(--or-clair)}
