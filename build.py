@@ -148,7 +148,7 @@ def footer(root):
         <p style="max-width:28em">Chauffeur privé VTC haut de gamme à Marseille et en Provence. Transferts aéroport, gares, croisières, affaires et événements.</p>
       </div>
       <div><h4>Services</h4><ul>{svc}</ul></div>
-      <div><h4>Contact</h4><ul><li><a href="tel:+33767123512">+33 7 67 12 35 12</a></li><li><a href="tel:+33469001713">+33 4 69 00 17 13</a></li><li><a href="mailto:contact@infinitetransfer.eu">contact@infinitetransfer.eu</a></li><li><a href="{root}contact.html">Demander un devis</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+33767123512">+33 7 67 12 35 12</a></li><li><a href="mailto:contact@infinitetransfer.eu">contact@infinitetransfer.eu</a></li><li><a href="{root}contact.html">Demander un devis</a></li></ul></div>
       <div><h4>Infos</h4><ul><li><a href="{root}guide.html">Le guide</a></li><li><a href="https://www.instagram.com/infinite.transfer/">Instagram</a></li><li><a href="https://www.facebook.com/">Facebook</a></li><li><a href="{GMB_URL}">Nos avis Google</a></li></ul></div>
     </div>
     <div class="legal">
