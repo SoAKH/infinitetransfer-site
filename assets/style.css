@@ -226,9 +226,11 @@ footer a:hover{color:var(--or-clair)}
 
 /* ——— Menu déroulant Services ——— */
 .nav ul li{position:relative}
-.has-sub>button{background:none;border:0;cursor:pointer;font:inherit;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#c9c7c2;display:flex;align-items:center;gap:8px;padding:0}
+.nav ul{align-items:center}
+.nav ul a,.has-sub>button{line-height:1.7}
+.has-sub>button{background:none;border:0;cursor:pointer;font:inherit;line-height:1.7;margin:0;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#c9c7c2;display:flex;align-items:center;gap:8px;padding:0}
 .has-sub>button:hover,.has-sub:focus-within>button{color:var(--or-clair)}
-.has-sub>button::after{content:"";width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.has-sub>button::after{content:"";width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:translateY(-2px) rotate(45deg)}
 .sub{position:absolute;top:calc(100% + 18px);left:-24px;min-width:270px;background:var(--graphite);border:1px solid rgba(184,154,94,.3);padding:12px 0;display:none!important;flex-direction:column;gap:0!important}
 .sub::before{content:"";position:absolute;top:-20px;left:0;right:0;height:20px}
 .has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{display:flex!important}
