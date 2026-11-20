@@ -125,7 +125,6 @@ def nav(root, current):
     <ul id="menu">
       <li class="has-sub"><button type="button" aria-expanded="false" aria-controls="subServices">Services</button><ul class="sub" id="subServices">{sub}</ul></li>
       {item("index.html#flotte", "Flotte", "flotte")}
-      {item("guide.html", "Guide", "guide")}
       {item("index.html#faq", "FAQ", "faq")}
       {item("contact.html", "Contact", "contact")}
     </ul>
