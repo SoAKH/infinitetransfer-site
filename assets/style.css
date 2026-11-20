@@ -378,5 +378,5 @@ a.svc:hover h3{color:#8a6f3c}
 /* Visuels de la flotte : même cadre pour photos et dessins */
 .car-vis{aspect-ratio:16/9;display:grid;place-items:center;margin:4px 0;background:radial-gradient(circle at 50% 60%,rgba(184,154,94,.08),transparent 65%)}
 .car-vis svg{width:88%;margin:0}
-.car-photo{background:#d9dcdf;overflow:hidden}
+.car-photo{background:#fff;overflow:hidden}
 .car-photo picture,.car-photo img{width:100%;height:100%;display:block;object-fit:cover}

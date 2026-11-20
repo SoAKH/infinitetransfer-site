@@ -7,7 +7,7 @@ SERVICES = [
  "nav": "Transfert aéroport",
  "short": "Aéroport",
  "title": "VTC aéroport Marseille Provence : chauffeur privé à prix fixe | Infinite Transfer",
- "description": "Transfert VTC vers et depuis l'aéroport Marseille Provence (Marignane). Accueil avec pancarte, suivi de vol, prix fixe annoncé à la réservation. Berline, Classe S ou Classe V.",
+ "description": "Transfert VTC vers et depuis l'aéroport Marseille Provence (Marignane). Accueil avec pancarte, suivi de vol, prix fixe annoncé à la réservation. Mercedes Classe E, Classe S ou Classe V.",
  "label": "Transfert aéroport",
  "h1": "VTC aéroport Marseille Provence, <em>votre chauffeur vous attend.</em>",
  "lead": "Arrivée ou départ à Marignane : votre chauffeur suit votre vol, vous accueille dans le hall avec une pancarte à votre nom et vous conduit à destination, au prix convenu à la réservation.",
@@ -102,7 +102,7 @@ SERVICES = [
  "faq": [
    ("Où se trouve le terminal de croisière de Marseille ?", "Le terminal MPCT se situe dans le nord du port de Marseille. Votre chauffeur vous dépose au plus près de l'entrée de votre navire."),
    ("Pouvez-vous organiser une excursion pendant l'escale ?", "Oui. Indiquez-nous l'heure d'arrivée et de retour à bord, et vos envies : nous vous proposons un programme et un prix fixe."),
-   ("Combien de bagages peut-on emporter ?", "Jusqu'à 7 valises en Mercedes Classe V, 3 en berline ou en Classe S."),
+   ("Combien de bagages peut-on emporter ?", "Jusqu'à 7 valises en Mercedes Classe V, 3 en Classe E ou en Classe S."),
  ],
 },
 {
@@ -145,7 +145,7 @@ SERVICES = [
  "description": "Chauffeur privé pour entreprises et clients VIP à Marseille et en Provence : accueil de clients, séminaires, mise à disposition. Mercedes Classe S, discrétion et facturation claire.",
  "label": "Affaires & VIP",
  "h1": "Chauffeur privé affaires et VIP, <em>l'exigence au quotidien.</em>",
- "lead": "Accueil de clients, déplacements de dirigeants, séminaires et salons : un service ponctuel et discret, en Mercedes Classe S ou en berline, avec une facture pour chaque course.",
+ "lead": "Accueil de clients, déplacements de dirigeants, séminaires et salons : un service ponctuel et discret, en Mercedes Classe S ou Classe E, avec une facture pour chaque course.",
  "facts": [("Classe S", "Véhicule de prestige"), ("FR / EN", "Chauffeurs bilingues"), ("Facture", "Pour chaque course")],
  "from_hint": "",
  "intro_label": "Entreprises",
