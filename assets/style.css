@@ -358,3 +358,19 @@ a.svc:hover h3{color:#8a6f3c}
 .art-fig-empty{display:grid;place-items:center;background:radial-gradient(circle at 70% 20%,rgba(184,154,94,.25),transparent 60%),#16171a}
 .art-fig-empty img{width:34%;height:auto;opacity:.85}
 @media (max-width:900px){.aside-stack{position:static}}
+
+/* Avis clients */
+.reviews{border-bottom:1px solid rgba(184,154,94,.15)}
+.reviews + #experience{padding-top:clamp(80px,11vw,140px)}
+.rev-score{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;justify-self:end}
+.rev-big{font-family:var(--display);font-size:4.4rem;line-height:1;color:#fff}
+.rev-big small{font-size:1.4rem;color:var(--gris);margin-left:4px}
+.rev-score p{color:var(--gris);font-size:.88rem;margin-top:6px}
+.rev-stars{display:flex;gap:3px;color:var(--or)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(184,154,94,.22);border:1px solid rgba(184,154,94,.22)}
+@media (max-width:960px){.rev-grid{grid-template-columns:1fr}.rev-score{justify-self:start}}
+.rev{margin:0;background:var(--graphite);padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;gap:20px}
+.rev blockquote{margin:0;font-family:var(--display);font-size:1.35rem;line-height:1.45;color:#f1efeb;font-style:italic}
+.rev figcaption{margin-top:auto;display:flex;flex-direction:column;gap:6px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08)}
+.rev figcaption b{font-weight:500;color:#fff;letter-spacing:.04em}
+.rev figcaption span{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--gris)}
