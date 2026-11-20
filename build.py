@@ -310,9 +310,10 @@ def build_article(a, arts):
     if related:
         rel_html = f'''<section class="light" style="padding-top:0"><div class="wrap"><div class="head"><div><span class="label">À lire aussi</span><h2>Sur le même <em>thème.</em></h2></div></div>{post_cards(related, "{{root}}", True)}</div></section>'''
     items = [("Accueil", "index.html"), (s["nav"], s["slug"] + ".html"), (a["title"], "")]
-    figure = ""
     if a.get("image"):
-        figure = f'<figure class="art-fig"><img src="{{{{root}}}}{a["image"]}" alt="{esc(a.get("image_alt", a["title"]))}" width="1200" height="800"></figure>'
+        figure = f'<figure class="art-fig"><img src="{{{{root}}}}{a["image"]}" alt="{esc(a.get("image_alt", a["title"]))}" width="800" height="600"></figure>'
+    else:
+        figure = '<figure class="art-fig art-fig-empty"><img src="{{root}}assets/img/logo-icone.png" alt="" width="120" height="46"></figure>'
     body = f'''
 <section class="page-hero">
   <div class="wrap">
@@ -325,7 +326,7 @@ def build_article(a, arts):
 </section>
 <section class="light">
   <div class="wrap split">
-    <aside>
+    <aside class="aside-stack">
       <div class="aside-box">
         <span class="label">{esc(s["short"])}</span>
         <h3>Besoin d'un chauffeur ?</h3>
@@ -333,8 +334,9 @@ def build_article(a, arts):
         <a class="btn btn-or" href="{{{{root}}}}contact.html" style="color:var(--noir)">Demander un devis</a>
         <a href="{{{{root}}}}{s["slug"]}.html" style="font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#7a5f2e">Découvrir le service →</a>
       </div>
+      {figure}
     </aside>
-    <article class="prose">{figure}{markdown(a["md"])}</article>
+    <article class="prose">{markdown(a["md"])}</article>
   </div>
 </section>
 {rel_html}

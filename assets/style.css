@@ -351,5 +351,10 @@ a.svc:hover h3{color:#8a6f3c}
 .post-img-empty img{width:34%;height:auto;opacity:.85}
 .post:hover .post-img-empty img{transform:none}
 .post-img + small{margin-top:10px}
-.art-fig{margin:0 0 40px}
-.art-fig img{width:100%;height:auto;display:block}
+.aside-stack{position:sticky;top:110px;display:flex;flex-direction:column;gap:24px}
+.aside-stack .aside-box{position:static}
+.art-fig{margin:0;aspect-ratio:4/3;overflow:hidden;background:#16171a}
+.art-fig img{width:100%;height:100%;object-fit:cover;display:block}
+.art-fig-empty{display:grid;place-items:center;background:radial-gradient(circle at 70% 20%,rgba(184,154,94,.25),transparent 60%),#16171a}
+.art-fig-empty img{width:34%;height:auto;opacity:.85}
+@media (max-width:900px){.aside-stack{position:static}}
