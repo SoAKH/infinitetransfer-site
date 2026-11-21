@@ -32,6 +32,9 @@ NOINDEX = (bool(os.environ.get("NETLIFY")) and "infinitetransfer.eu" not in os.e
     or (bool(os.environ.get("CF_PAGES")) and not os.environ.get("SITE_URL"))
 OUT = os.path.join(HERE, "public")
 SVC = {s["slug"]: s for s in SERVICES}
+# Version des fichiers CSS/JS : change à chaque modification, pour que les navigateurs chargent toujours la dernière version
+import hashlib
+ASSET_V = hashlib.md5(b"".join(open(os.path.join(HERE, "assets", f), "rb").read() for f in ("style.css", "site.js"))).hexdigest()[:8]
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
 
 def fr_date(d):
@@ -212,7 +215,7 @@ def page(path, title, description, body, current="", jsonld=None, image=None):
 <link rel="apple-touch-icon" href="{root}assets/img/apple-touch-icon.png">
 <link rel="preload" href="{root}assets/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{root}assets/fonts/manrope-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{root}assets/style.css">
+<link rel="stylesheet" href="{root}assets/style.css?v={ASSET_V}">
 {ld}
 </head>
 <body>
@@ -222,7 +225,7 @@ def page(path, title, description, body, current="", jsonld=None, image=None):
 </main>
 {footer(root)}
 <a class="float-wa" href="https://wa.me/33767123512" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">{WA_ICON}</a>
-<script src="{root}assets/site.js"></script>
+<script src="{root}assets/site.js?v={ASSET_V}"></script>
 </body>
 </html>
 '''
