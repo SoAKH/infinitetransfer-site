@@ -156,7 +156,7 @@ def footer(root):
     </div>
     <div class="legal">
       <span>© {date.today().year} Infinite Transfer. Tous droits réservés.</span>
-      <span><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a> · <a href="#">Cookies</a></span>
+      <span><a href="{root}mentions-legales.html">Mentions légales</a> · <a href="{root}politique-confidentialite.html">Confidentialité</a> · <a href="{root}cgv.html">CGV</a></span>
     </div>
   </div>
 </footer>'''
@@ -447,7 +447,7 @@ FIXED = {
     "/transfert-vtc-port-de-croisiere-w1": "/port-croisiere.html", "/vtc-evenementiel-w1": "/vtc-evenementiel.html",
     "/contact": "/contact.html", "/tarifs": "/contact.html", "/provence-tarifs": "/contact.html", "/provence-tarifs-w1": "/contact.html",
     "/guide-local-w1": "/guide.html", "/plan-du-site": "/", "/provence-w1": "/", "/toutes-nos-prestations-1": "/",
-    "/secteurs": "/", "/nos-activites": "/", "/mentions-legales": "/", "/politique-confidentialite": "/",
+    "/secteurs": "/", "/nos-activites": "/", "/mentions-legales": "/mentions-legales.html", "/politique-confidentialite": "/politique-confidentialite.html",
     "/gare+saint-charles+marseille-y1": "/transfert-gare.html", "/aeroport+marseille-provence-y2": "/transfert-aeroport.html",
     "/gare+tgv+aix-en-provence-y4": "/transfert-gare.html", "/port+de+croisiere+mpct+marseille-y7": "/port-croisiere.html",
     "/parc+national+du+luberon-y3": "/vtc-longue-distance.html", "/toulon+dans+le+var-y5": "/vtc-longue-distance.html",
@@ -484,6 +484,33 @@ def build_redirects():
     open(os.path.join(OUT, "_redirects"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
     return len(lines)
 
+def build_legal():
+    """Pages légales : content/pages/<slug>.md (en-tête title, description, updated)."""
+    out = []
+    d = os.path.join(HERE, "content", "pages")
+    for f in sorted(os.listdir(d)):
+        if not f.endswith(".md"):
+            continue
+        raw = open(os.path.join(d, f), encoding="utf-8").read()
+        m = re.match(r"---\s*\n(.*?)\n---\s*\n(.*)", raw, re.S)
+        meta = dict(re.findall(r"^(\w+):[ \t]*(.*?)[ \t]*$", m.group(1), re.M))
+        slug = f[:-3]
+        upd = f'<div class="art-meta"><span>Dernière mise à jour : {esc(meta["updated"])}</span></div>' if meta.get("updated") else ""
+        body = f'''
+<section class="page-hero" style="padding-bottom:clamp(40px,5vw,60px)">
+  <div class="wrap">
+    {crumbs([("Accueil", "index.html"), (meta["title"], "")], "{{root}}")}
+    <h1>{esc(meta["title"])}</h1>
+    {upd}
+  </div>
+</section>
+<section class="light">
+  <div class="wrap"><article class="prose legal">{markdown(m.group(2))}</article></div>
+</section>'''
+        out.append(page(slug + ".html", f'{meta["title"]} | Infinite Transfer', meta["description"], body,
+                        jsonld=[ORG, crumbs_ld([("Accueil", "index.html"), (meta["title"], "")])]))
+    return out
+
 def build_404():
     body = f'''
 <section class="page-hero" style="min-height:60vh">
@@ -513,6 +540,7 @@ def main():
     arts = load_articles()
     pages = [build_home(arts), build_contact(), build_guide(arts)]
     pages += [build_service(s, arts) for s in SERVICES]
+    pages += build_legal()
     pages += [build_article(a, arts) for a in arts]
     build_404()
     lastmod = {f"articles/{a['slug']}.html": a["date"].isoformat() for a in arts}
