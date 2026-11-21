@@ -85,7 +85,7 @@
     e.preventDefault();
     const txt = check(true); if (!txt) { res.classList.remove('show'); return; }
     const btn = $('sendBtn'); btn.disabled = true; const label = btn.firstChild.textContent; btn.firstChild.textContent = 'Envoi en cours… ';
-    const data = { access_key: ACCESS_KEY, subject: 'Demande de devis – ' + v('name'), from_name: 'Site Infinite Transfer',
+    const data = { access_key: ACCESS_KEY, subject: `Demande de devis - ${v('from')} > ${v('to')} / ${v('date').split('-').reverse().join('/')}`, from_name: 'Site Infinite Transfer',
       botcheck: $('botcheck').checked, nom: v('name'), telephone: v('phone'), message: txt };
     if (v('email')) data.email = v('email');
     try {
