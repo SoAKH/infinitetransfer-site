@@ -58,30 +58,46 @@
   if (saved) ['from', 'to', 'date', 'time'].forEach(k => { if (saved[k] && $(k)) $(k).value = saved[k]; });
 
   const err = $('err'), res = $('result'), sum = $('summary');
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const v = id => $(id).value.trim();
+  const ACCESS_KEY = '7a45e768-a1f8-49e4-bf84-8dd053508275'; // Web3Forms : demandes reçues sur infinite.transfer.vtc@gmail.com
+  const v = id => $(id).value.trim();
+  function check() {
     const missing = [['from', 'le lieu de prise en charge'], ['to', 'la destination'], ['date', 'la date'], ['time', "l'heure"], ['name', 'votre nom'], ['phone', 'votre téléphone']]
       .filter(([id]) => !v(id)).map(x => x[1]);
-    if (missing.length) {
-      err.textContent = "Merci d'indiquer " + missing.join(', ') + '.';
-      err.hidden = false; res.classList.remove('show'); return;
-    }
+    if (v('email') && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) missing.push('une adresse e-mail valide');
+    if (missing.length) { err.textContent = "Merci d'indiquer " + missing.join(', ') + '.'; err.hidden = false; return null; }
     err.hidden = true;
     const dt = new Date(v('date') + 'T00:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
     let txt = `Bonjour, je souhaite un devis pour un transfert.\n\nDépart : ${v('from')}\nDestination : ${v('to')}\nDate : ${dt} à ${v('time')}\nPassagers : ${v('pax')} · Valises : ${v('bags')}\nNom : ${v('name')}\nTéléphone : ${v('phone')}`;
+    if (v('email')) txt += `\nE-mail : ${v('email')}`;
     if ($('seat').checked) txt += `\nSiège auto : oui`;
     if (v('msg')) txt += `\nPrécisions : ${v('msg')}`;
-    sum.textContent = txt;
-    $('waLink').href = 'https://wa.me/33767123512?text=' + encodeURIComponent(txt);
-    $('mailLink').href = 'mailto:contact@infinitetransfer.eu?subject=' + encodeURIComponent('Demande de devis – ' + v('name')) + '&body=' + encodeURIComponent(txt);
-    res.classList.add('show');
-    res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    return txt;
+  }
+  // Envoi WhatsApp : le message part du compte WhatsApp du client
+  $('waBtn').addEventListener('click', () => {
+    const txt = check(); if (!txt) return;
+    const url = 'https://wa.me/33767123512?text=' + encodeURIComponent(txt);
+    const w = window.open(url, '_blank', 'noopener'); if (!w) window.location.href = url;
   });
-  $('copyBtn').addEventListener('click', async e => {
-    const b = e.currentTarget;
-    try { await navigator.clipboard.writeText(sum.textContent); b.textContent = 'Texte copié'; }
-    catch (x) { b.textContent = 'Sélectionnez le texte'; }
+  // Envoi par e-mail via Web3Forms
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const txt = check(); if (!txt) { res.classList.remove('show'); return; }
+    const btn = $('sendBtn'); btn.disabled = true; const label = btn.firstChild.textContent; btn.firstChild.textContent = 'Envoi en cours… ';
+    const data = { access_key: ACCESS_KEY, subject: 'Demande de devis – ' + v('name'), from_name: 'Site Infinite Transfer',
+      botcheck: $('botcheck').checked, nom: v('name'), telephone: v('phone'), message: txt };
+    if (v('email')) data.email = v('email');
+    try {
+      const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+      const j = await r.json();
+      if (!r.ok || !j.success) throw new Error(j.message || r.status);
+      sum.textContent = txt; res.classList.add('show'); res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      ['from', 'to', 'date', 'time', 'msg'].forEach(id => $(id).value = ''); $('seat').checked = false;
+      try { sessionStorage.removeItem('it-trajet'); } catch (x) {}
+    } catch (x) {
+      err.textContent = "L'envoi n'a pas abouti. Réessayez, utilisez le bouton WhatsApp ou appelez-nous au +33 7 67 12 35 12.";
+      err.hidden = false;
+    } finally { btn.disabled = false; btn.firstChild.textContent = label; }
   });
 })();
 

@@ -21,23 +21,24 @@
         <select id="bags"><option>0</option><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8 et plus</option></select></div>
       <div class="fld"><label for="name">Nom complet</label><input id="name" autocomplete="name"></div>
       <div class="fld"><label for="phone">Téléphone</label><input id="phone" type="tel" autocomplete="tel"></div>
+      <div class="fld full"><label for="email">E-mail <span class="opt">(facultatif, pour recevoir notre réponse par e-mail)</span></label><input id="email" type="email" autocomplete="email" placeholder="vous@exemple.fr"></div>
       <div class="full check"><input type="checkbox" id="seat"><label for="seat">J'ai besoin d'un siège auto pour enfant</label></div>
       <div class="fld full"><label for="msg">Précisions</label><textarea id="msg" placeholder="Numéro de vol ou de train, âge de l'enfant, trajet retour…"></textarea></div>
+      <input type="checkbox" id="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
       <p class="err" id="err" role="alert" hidden></p>
       <div class="q-foot">
-        <small>Votre tarif vous est confirmé par écrit avant toute réservation. Aucun paiement en ligne.</small>
-        <button class="btn btn-or" type="submit">Préparer ma demande
-          <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h15M11 1l4 4-4 4"/></svg></button>
+        <small>Votre tarif vous est confirmé par écrit avant toute réservation. Aucun paiement en ligne. Vos données sont traitées selon notre <a href="{{root}}politique-confidentialite.html" style="color:var(--or-clair)">politique de confidentialité</a>.</small>
+        <div class="q-btns">
+          <button class="btn btn-line" type="button" id="waBtn">Envoyer sur WhatsApp</button>
+          <button class="btn btn-or" type="submit" id="sendBtn">Envoyer ma demande
+            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h15M11 1l4 4-4 4"/></svg></button>
+        </div>
       </div>
       <div class="result" id="result" aria-live="polite">
-        <span class="t">Votre demande est prête.</span>
+        <span class="t" id="resTitle">Merci, votre demande a bien été envoyée.</span>
+        <p id="resText" style="color:#d6d3cd">Nous vous répondons rapidement avec votre prix fixe. Récapitulatif de votre demande :</p>
         <pre id="summary"></pre>
-        <div class="acts">
-          <a class="btn btn-or" id="waLink" href="#" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
-          <a class="btn btn-line" id="mailLink" href="#">Envoyer par e-mail</a>
-          <button class="btn btn-line" type="button" id="copyBtn">Copier le texte</button>
-        </div>
-        <small>Si l'envoi ne s'ouvre pas, copiez le texte et adressez-le au +33 7 67 12 35 12 ou à contact@infinitetransfer.eu.</small>
+        <small>Une question urgente ? Appelez-nous au +33 7 67 12 35 12.</small>
       </div>
     </form>
   </div>

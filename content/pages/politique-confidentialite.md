@@ -25,9 +25,14 @@ Nous ne collectons aucune donnée sensible, et nous ne vous demandons jamais vos
 
 ## Comment ces données nous parviennent
 
-Le formulaire de devis du site **n'enregistre aucune donnée sur nos serveurs**. Il prépare un message que vous choisissez de nous envoyer vous-même, par WhatsApp ou par e-mail. Nous recevons donc vos données uniquement lorsque vous nous les transmettez par ces moyens, par téléphone ou de vive voix.
+Le formulaire de devis du site vous propose deux façons de nous contacter :
 
-Pour faciliter votre saisie, le site garde temporairement les informations de votre trajet dans votre navigateur (stockage de session), le temps de passer d'une page à l'autre. Elles ne nous sont pas transmises et sont effacées à la fermeture de l'onglet.
+- **« Envoyer ma demande »** : votre demande nous est transmise par e-mail grâce au service Web3Forms, qui achemine le contenu du formulaire jusqu'à notre messagerie. Si vous indiquez votre adresse e-mail, nous pouvons vous répondre directement.
+- **« Envoyer sur WhatsApp »** : le formulaire prépare un message que vous envoyez vous-même depuis votre compte WhatsApp.
+
+Vous pouvez aussi nous contacter par téléphone ou par e-mail. Le site ne crée aucun compte client et n'enregistre vos demandes dans aucune base de données.
+
+Pour faciliter votre saisie, le site garde temporairement les informations de votre trajet dans votre navigateur (stockage de session), le temps de passer d'une page à l'autre. Elles sont effacées à la fermeture de l'onglet.
 
 ## Pourquoi nous les utilisons
 
@@ -58,6 +63,7 @@ Lorsque vous nous contactez par WhatsApp ou par e-mail, ces échanges transitent
 ## Services techniques utilisés par le site
 
 - **Hébergement** : le site est hébergé par Cloudflare, Inc. Comme tout hébergeur, Cloudflare traite des données techniques de connexion (adresse IP, type de navigateur) pour afficher le site et le protéger contre les attaques.
+- **Envoi du formulaire** : le service Web3Forms reçoit le contenu du formulaire de devis lorsque vous cliquez sur « Envoyer ma demande », uniquement pour nous le transmettre par e-mail.
 - **Suggestions d'adresses** : lorsque vous saisissez une adresse dans le formulaire, le texte tapé est envoyé au service public de géocodage de la Géoplateforme (IGN) afin de vous proposer des adresses. Aucune autre information ne lui est transmise.
 - **Polices de caractères** : elles sont hébergées directement sur notre site. Aucun appel n'est fait à un service tiers pour les afficher.
 
