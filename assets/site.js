@@ -60,10 +60,11 @@
   const err = $('err'), res = $('result'), sum = $('summary');
   const ACCESS_KEY = '7a45e768-a1f8-49e4-bf84-8dd053508275'; // Web3Forms : demandes reçues sur infinite.transfer.vtc@gmail.com
   const v = id => $(id).value.trim();
-  function check() {
+  function check(needEmail) {
     const missing = [['from', 'le lieu de prise en charge'], ['to', 'la destination'], ['date', 'la date'], ['time', "l'heure"], ['name', 'votre nom'], ['phone', 'votre téléphone']]
       .filter(([id]) => !v(id)).map(x => x[1]);
-    if (v('email') && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) missing.push('une adresse e-mail valide');
+    if (needEmail && !v('email')) missing.push('votre e-mail (ou utilisez le bouton WhatsApp)');
+    else if (v('email') && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) missing.push('une adresse e-mail valide');
     if (missing.length) { err.textContent = "Merci d'indiquer " + missing.join(', ') + '.'; err.hidden = false; return null; }
     err.hidden = true;
     const dt = new Date(v('date') + 'T00:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
@@ -75,14 +76,14 @@
   }
   // Envoi WhatsApp : le message part du compte WhatsApp du client
   $('waBtn').addEventListener('click', () => {
-    const txt = check(); if (!txt) return;
+    const txt = check(false); if (!txt) return;
     const url = 'https://wa.me/33767123512?text=' + encodeURIComponent(txt);
     const w = window.open(url, '_blank', 'noopener'); if (!w) window.location.href = url;
   });
   // Envoi par e-mail via Web3Forms
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    const txt = check(); if (!txt) { res.classList.remove('show'); return; }
+    const txt = check(true); if (!txt) { res.classList.remove('show'); return; }
     const btn = $('sendBtn'); btn.disabled = true; const label = btn.firstChild.textContent; btn.firstChild.textContent = 'Envoi en cours… ';
     const data = { access_key: ACCESS_KEY, subject: 'Demande de devis – ' + v('name'), from_name: 'Site Infinite Transfer',
       botcheck: $('botcheck').checked, nom: v('name'), telephone: v('phone'), message: txt };
