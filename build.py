@@ -161,10 +161,22 @@ def footer(root):
   </div>
 </footer>'''
 
+def clean(path):
+    """Adresse publique d'un fichier : sans « .html », et « index.html » devient la racine."""
+    path = re.sub(r"(^|/)index\.html$", r"\1", path)
+    return re.sub(r"\.html$", "", path)
+
+def clean_links(doc):
+    """Retire « .html » des liens internes (Cloudflare Pages sert les pages sans extension)."""
+    doc = re.sub(r'(href|action)="((?:\.\./)*)index\.html', lambda m: f'{m.group(1)}="{m.group(2) or "./"}', doc)
+    doc = re.sub(r'(href|action)="((?:\.\./)*[\w\-/]+)\.html', r'\1="\2', doc)
+    doc = re.sub(re.escape(BASE_URL) + r'/([\w\-/]*?)(?:index)?\.html', lambda m: BASE_URL + "/" + m.group(1), doc)
+    return doc
+
 def page(path, title, description, body, current="", jsonld=None, image=None):
     depth = path.count("/")
     root = "../" * depth
-    canonical = BASE_URL + "/" + ("" if path == "index.html" else path)
+    canonical = BASE_URL + "/" + clean(path)
     robots = '<meta name="robots" content="noindex">' if NOINDEX else ""
     ld = ""
     if jsonld:
@@ -203,6 +215,7 @@ def page(path, title, description, body, current="", jsonld=None, image=None):
 </body>
 </html>
 '''
+    doc = clean_links(doc)
     dest = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     open(dest, "w", encoding="utf-8").write(doc)
@@ -464,8 +477,10 @@ def build_redirects():
     for l in open(os.path.join(HERE, "old_urls.txt"), encoding="utf-8"):
         l = l.strip()
         if l and not l.startswith("#"):
-            lines.append(f"{l}  {old_target(l)}  301")
-    lines += ["/archives-*  /guide.html  301", "/details-*  /guide.html  301"]
+            target = "/" + clean(old_target(l).lstrip("/")) if old_target(l).endswith(".html") else old_target(l)
+            if target.split("#")[0] != l:
+                lines.append(f"{l}  {target}  301")
+    lines += ["/archives-*  /guide  301", "/details-*  /guide  301"]
     open(os.path.join(OUT, "_redirects"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
     return len(lines)
 
@@ -479,7 +494,7 @@ def main():
     pages += [build_service(s, arts) for s in SERVICES]
     pages += [build_article(a, arts) for a in arts]
     lastmod = {f"articles/{a['slug']}.html": a["date"].isoformat() for a in arts}
-    urls = "".join(f"<url><loc>{BASE_URL}/{'' if p == 'index.html' else p}</loc><lastmod>{lastmod.get(p, date.today().isoformat())}</lastmod></url>" for p in pages)
+    urls = "".join(f"<url><loc>{BASE_URL}/{clean(p)}</loc><lastmod>{lastmod.get(p, date.today().isoformat())}</lastmod></url>" for p in pages)
     open(os.path.join(OUT, "sitemap.xml"), "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
     open(os.path.join(OUT, "_headers"), "w").write("https://:project.pages.dev/*\n  X-Robots-Tag: noindex\n")
     open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n")
