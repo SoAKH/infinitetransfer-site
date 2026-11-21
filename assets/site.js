@@ -184,3 +184,42 @@
   }
   ['qFrom', 'qTo', 'from', 'to'].forEach(id => { const el = document.getElementById(id); if (el) attach(el); });
 })();
+
+// Liste des indicatifs avec drapeaux (remplace la liste native, qui ne peut pas afficher d'images)
+(function () {
+  const sel = document.getElementById('cc');
+  if (!sel) return;
+  const base = (document.querySelector('script[src*="assets/site.js"]').getAttribute('src').split('assets/site.js')[0]) + 'assets/flags/';
+  const opts = [...sel.options].map((o, i) => ({ i, v: o.value, iso: o.dataset.iso, name: o.text.replace(/\s*\(\+\d+\)$/, '') }));
+  const wrap = document.createElement('div'); wrap.className = 'cc';
+  const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'cc-btn';
+  btn.setAttribute('aria-haspopup', 'listbox'); btn.setAttribute('aria-expanded', 'false'); btn.setAttribute('aria-label', 'Indicatif du pays');
+  const list = document.createElement('ul'); list.className = 'cc-list'; list.setAttribute('role', 'listbox'); list.hidden = true; list.tabIndex = -1;
+  const flag = o => `<img src="${base}${o.iso}.svg" alt="" width="22" height="16" loading="lazy">`;
+  const paint = () => { const o = opts[sel.selectedIndex]; btn.innerHTML = `${flag(o)}<span>+${o.v}</span>`; };
+  let built = false, active = 0;
+  const build = () => {
+    if (built) return; built = true;
+    list.innerHTML = opts.map(o => `<li role="option" id="cc-${o.i}" data-i="${o.i}">${flag(o)}<span>${o.name}</span><small>+${o.v}</small></li>`).join('');
+  };
+  const mark = i => { active = i; [...list.children].forEach((li, k) => { li.classList.toggle('on', k === i); li.setAttribute('aria-selected', k === sel.selectedIndex); });
+    const li = list.children[i]; if (li) { li.scrollIntoView({ block: 'nearest' }); list.setAttribute('aria-activedescendant', li.id); } };
+  const open = () => { build(); list.hidden = false; btn.setAttribute('aria-expanded', 'true'); mark(sel.selectedIndex); list.focus(); };
+  const close = (focus) => { list.hidden = true; btn.setAttribute('aria-expanded', 'false'); if (focus) btn.focus(); };
+  const pick = i => { sel.selectedIndex = i; sel.dispatchEvent(new Event('change', { bubbles: true })); paint(); close(true); };
+  btn.addEventListener('click', () => list.hidden ? open() : close());
+  list.addEventListener('click', e => { const li = e.target.closest('li'); if (li) pick(+li.dataset.i); });
+  let typed = '', tt;
+  list.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); mark(Math.min(active + 1, opts.length - 1)); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); mark(Math.max(active - 1, 0)); }
+    else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(active); }
+    else if (e.key === 'Escape' || e.key === 'Tab') { close(e.key === 'Escape'); }
+    else if (e.key.length === 1) { clearTimeout(tt); typed += e.key.toLowerCase(); tt = setTimeout(() => typed = '', 700);
+      const n = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+      const k = opts.findIndex(o => n(o.name).startsWith(n(typed))); if (k >= 0) mark(k); }
+  });
+  document.addEventListener('click', e => { if (!wrap.contains(e.target) && !list.hidden) close(); });
+  sel.classList.add('cc-native'); sel.tabIndex = -1; sel.setAttribute('aria-hidden', 'true');
+  sel.parentNode.insertBefore(wrap, sel); wrap.append(btn, list, sel); paint();
+})();
