@@ -18,7 +18,7 @@ et l'indiquer dans l'en-tête de l'article (`image:` et `image_alt:` avec une de
 | van-coucher-soleil-calanque.jpg | Arrière d'un van face à la mer au coucher du soleil |
 | vans-palais-du-pharo.jpg | Trois véhicules devant le palais du Pharo |
 | van-domaine-hotel-luxe.jpg | Van Classe V dans la cour d'un domaine de prestige |
-| vans-soiree-nuit.jpg | Vans de nuit sur une place de village |
+| vans-soiree-nuit.jpg | Vans de nuit à Saint-Rémy-de-Provence |
 | van-intercontinental-marseille.jpg | Van devant l'InterContinental Marseille, de nuit |
 | vans-circuit-paul-ricard.jpg | Deux vans au circuit Paul Ricard |
 | van-hotel-belles-rives.jpg | Van devant l'hôtel Belles Rives (Juan-les-Pins) |
@@ -36,3 +36,5 @@ et l'indiquer dans l'en-tête de l'article (`image:` et `image_alt:` avec une de
 | van-champ-lavande-valensole.jpg | Van Classe V devant un champ de lavande, plateau de Valensole |
 | classe-s-bord-de-mer.jpg | Mercedes Classe S au bord de la mer |
 | classe-s-interieur-cuir.jpg | Intérieur cuir matelassé de la Classe S, places arrière |
+| van-attente-evenement-marseille.jpg | Van Classe V et véhicules noirs stationnés dans une rue de Marseille (Arenc) |
+| van-entree-hotel-marseille.jpg | Van Classe V phares allumés à l'entrée d'un hôtel à Marseille |

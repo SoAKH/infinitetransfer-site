@@ -2,8 +2,8 @@
 title: Concert à l'Orange Vélodrome ou au Dôme : rentrer sereinement après le spectacle
 description: Grands concerts et matchs à Marseille : comment éviter la cohue de la sortie et rentrer chez soi sans attendre, avec un chauffeur réservé.
 category: vtc-evenementiel
-image: assets/img/articles/vans-soiree-nuit.jpg
-image_alt: Vans Mercedes Infinite Transfer en soirée
+image: assets/img/articles/van-attente-evenement-marseille.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer stationné à Marseille
 date: 2026-11-20
 ---
 Un grand concert à l'**Orange Vélodrome**, un spectacle au **Dôme** ou une soirée au **Palais du Pharo** : à Marseille, les grands événements réunissent des dizaines de milliers de personnes. Le plus difficile n'est souvent pas d'arriver, mais de repartir.
