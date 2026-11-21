@@ -2,6 +2,8 @@
 title: Mise à disposition d'un chauffeur à l'heure : comment ça marche ?
 description: Une journée de rendez-vous, une visite de sites ou un programme qui peut changer : le principe de la mise à disposition d'un chauffeur privé.
 category: vtc-affaires-vip
+image: assets/img/articles/van-hotel-belles-rives.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer devant l'hôtel Belles Rives
 date: 2026-11-20
 ---
 Un transfert classique va d'un point A à un point B. Mais certaines journées ne se résument pas à un seul trajet : une série de rendez-vous, la visite de plusieurs sites, un roadshow d'investisseurs ou un programme qui peut changer en cours de route. C'est le principe de la **mise à disposition**.

@@ -2,6 +2,8 @@
 title: Accueillir un client VIP à Marseille : les bonnes pratiques
 description: Partenaires, dirigeants, invités de marque : comment organiser un accueil irréprochable à l'aéroport ou en gare, de l'arrivée au rendez-vous.
 category: vtc-affaires-vip
+image: assets/img/articles/van-intercontinental-marseille.jpg
+image_alt: Van Infinite Transfer devant l'hôtel InterContinental Marseille
 date: 2026-11-20
 ---
 Quand un client important, un dirigeant du groupe ou un partenaire étranger arrive à Marseille, la première impression se joue dès sa sortie de l'avion ou du train. Un accueil soigné en dit long sur votre entreprise.

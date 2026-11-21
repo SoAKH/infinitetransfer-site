@@ -2,6 +2,8 @@
 title: Rejoindre le terminal de croisière de Marseille depuis l'aéroport ou la gare
 description: Accéder au terminal MPCT avec ses bagages de croisière : distances, temps de trajet et conseils pour l'embarquement et le débarquement.
 category: port-croisiere
+image: assets/img/articles/vans-terminal-croisiere.jpg
+image_alt: Vans Infinite Transfer au terminal de croisière de Marseille, paquebot à quai
 date: 2026-11-20
 ---
 Marseille est l'un des grands ports de croisière de Méditerranée. La plupart des paquebots accostent au **Marseille Provence Cruise Terminal (MPCT)**, dans la partie nord du port. Le jour de l'embarquement, avec plusieurs grosses valises, l'accès mérite d'être anticipé.

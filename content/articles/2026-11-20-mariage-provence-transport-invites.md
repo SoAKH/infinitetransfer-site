@@ -2,6 +2,8 @@
 title: Mariage en Provence : bien organiser le transport des invités
 description: Domaines, bastides et mas souvent isolés : comment organiser les navettes des invités et l'arrivée des mariés pour un mariage en Provence.
 category: vtc-evenementiel
+image: assets/img/articles/van-domaine-hotel-luxe.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer dans la cour d'un domaine de prestige
 date: 2026-11-20
 ---
 Un mariage en Provence, c'est souvent un domaine viticole, une bastide ou un mas au milieu des vignes, dans les Alpilles, le pays d'Aix ou le Luberon. Des lieux magnifiques, mais rarement faciles d'accès pour des invités venus de loin. Le transport fait partie des détails qui comptent.

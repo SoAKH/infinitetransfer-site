@@ -2,6 +2,8 @@
 title: Escale à Marseille : excursion à Cassis et aux calanques en VTC
 description: Profiter d'une escale de croisière pour découvrir Cassis, son port et les calanques, avec un chauffeur privé et un retour à bord garanti.
 category: port-croisiere
+image: assets/img/articles/van-coucher-soleil-calanque.jpg
+image_alt: Van Infinite Transfer face à la mer au coucher du soleil, près de Marseille
 date: 2026-11-20
 ---
 À une trentaine de kilomètres de Marseille, **Cassis** est l'une des excursions préférées des croisiéristes : un petit port de pêche coloré, des falaises spectaculaires et l'accès aux célèbres calanques. Avec un chauffeur privé, c'est une sortie facile à caser dans une journée d'escale.

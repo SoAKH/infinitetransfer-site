@@ -2,6 +2,8 @@
 title: Vol retardé à l'aéroport Marseille Provence : que devient votre transfert ?
 description: Retard, avance ou annulation de vol à Marignane : comment votre chauffeur VTC s'adapte, et ce que vous devez prévoir pour arriver sereinement.
 category: transfert-aeroport
+image: assets/img/articles/van-nuit-marseille.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer de nuit à Marseille
 date: 2026-11-20
 ---
 Un vol qui arrive avec une heure de retard, une correspondance manquée, un atterrissage plus tôt que prévu : à l'aéroport Marseille Provence comme ailleurs, les horaires bougent souvent. Bonne nouvelle, avec un chauffeur réservé à l'avance, ces imprévus ne vous coûtent ni stress ni supplément.

@@ -2,6 +2,8 @@
 title: Gare Saint-Charles : retrouver son chauffeur et rejoindre sa destination
 description: Arriver en train à Marseille Saint-Charles : point de rendez-vous, bagages, trajets vers le Vieux-Port, l'aéroport ou le port de croisière.
 category: transfert-gare
+image: assets/img/articles/van-gare-saint-charles.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer à la gare Marseille Saint-Charles
 date: 2026-11-20
 ---
 La gare **Marseille Saint-Charles** est la porte d'entrée de la ville pour des millions de voyageurs chaque année. Perchée sur sa butte, avec son célèbre escalier monumental, elle est proche du centre… mais pas toujours simple à quitter avec des valises.

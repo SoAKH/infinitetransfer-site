@@ -2,6 +2,8 @@
 title: Gare d'Aix-en-Provence TGV : comment rejoindre Aix, Marseille ou le Luberon
 description: La gare TGV d'Aix est éloignée du centre-ville. Distances, durées et solutions pour rejoindre votre destination avec un chauffeur privé.
 category: transfert-gare
+image: assets/img/articles/van-bastide-provence.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer devant une bastide en Provence
 date: 2026-11-20
 ---
 Beaucoup de voyageurs découvrent en descendant du train que la **gare Aix-en-Provence TGV** ne se trouve pas à Aix. Construite sur le plateau de l'Arbois, entre Aix, Marseille et l'aéroport, elle est bien desservie par les TGV mais isolée du reste de la ville.

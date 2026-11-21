@@ -2,6 +2,8 @@
 title: Arriver à l'aéroport de Marseille avec des enfants : sièges auto et conseils
 description: Siège bébé, rehausseur, poussette, bagages : comment organiser un transfert serein depuis l'aéroport Marseille Provence en famille.
 category: transfert-aeroport
+image: assets/img/articles/interieur-classe-v-sieges.jpg
+image_alt: Intérieur d'une Mercedes Classe V Infinite Transfer, sièges passagers
 date: 2026-11-20
 ---
 Après un vol avec des enfants, la dernière chose dont on a envie est de chercher un taxi avec une poussette, trois valises et des enfants fatigués. Un transfert réservé à l'avance règle la question, à condition de bien le préparer.

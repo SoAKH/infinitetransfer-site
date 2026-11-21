@@ -2,6 +2,8 @@
 title: Escale de croisière à Marseille : que voir en une journée avec un chauffeur
 description: Notre-Dame de la Garde, Vieux-Port, Panier, Corniche : un programme d'escale à Marseille à votre rythme, avec retour à bord garanti.
 category: port-croisiere
+image: assets/img/articles/van-cathedrale-la-major.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer devant la cathédrale de la Major à Marseille
 date: 2026-11-20
 ---
 Une escale à Marseille dure souvent quelques heures seulement. Pour en profiter sans dépendre d'un bus d'excursion ni courir après les horaires, un chauffeur privé est la solution la plus souple : vous choisissez le programme, il s'occupe du reste.

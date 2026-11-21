@@ -2,6 +2,8 @@
 title: Séminaire à Marseille ou Aix : organiser les navettes des participants
 description: Arrivées échelonnées, hôtels, lieux de réunion et soirées : nos conseils pour organiser le transport d'un séminaire ou d'un congrès en Provence.
 category: vtc-affaires-vip
+image: assets/img/articles/vans-circuit-paul-ricard.jpg
+image_alt: Vans Mercedes Infinite Transfer au circuit Paul Ricard
 date: 2026-11-20
 ---
 Marseille, Aix-en-Provence et Cassis accueillent toute l'année séminaires, conventions et congrès. Pour l'organisateur, le transport des participants est souvent un casse-tête : arrivées à des heures différentes, plusieurs hôtels, une soirée dans un lieu excentré…

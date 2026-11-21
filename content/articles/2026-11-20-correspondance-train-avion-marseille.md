@@ -2,6 +2,8 @@
 title: Correspondance train – avion à Marseille : relier les gares et l'aéroport
 description: Arriver en TGV et repartir en avion, ou l'inverse : comment organiser la liaison entre Saint-Charles, Aix TGV et l'aéroport de Marignane.
 category: transfert-gare
+image: assets/img/articles/van-hotel-ac-marseille.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer devant un hôtel à Marseille
 date: 2026-11-20
 ---
 Arriver à Marseille en train pour repartir en avion, ou atterrir à Marignane pour prendre un TGV : ces correspondances sont fréquentes, et le moindre retard peut faire rater la suite du voyage. Voici comment les sécuriser.

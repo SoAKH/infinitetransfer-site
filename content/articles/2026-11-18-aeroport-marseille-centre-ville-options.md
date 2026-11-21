@@ -2,6 +2,8 @@
 title: Aéroport Marseille Provence – centre-ville : comment rejoindre Marseille ?
 description: Navette, train, taxi ou VTC : les options pour aller de l'aéroport de Marignane au centre de Marseille, avec leurs avantages selon votre voyage.
 category: transfert-aeroport
+image: assets/img/articles/van-aeroport-marseille-provence.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer à l'aéroport Marseille Provence
 date: 2026-11-18
 ---
 L'aéroport Marseille Provence est situé à Marignane, à environ 27 km du centre de Marseille. Selon l'heure, vos bagages et le nombre de voyageurs, la meilleure solution n'est pas toujours la même. Voici un tour d'horizon pour choisir sereinement.

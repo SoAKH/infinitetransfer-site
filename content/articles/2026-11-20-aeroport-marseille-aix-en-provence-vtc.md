@@ -2,6 +2,8 @@
 title: Aéroport Marseille Provence – Aix-en-Provence : le trajet en VTC
 description: Durée, itinéraire et conseils pour rejoindre Aix-en-Provence ou la gare Aix TGV depuis l'aéroport de Marignane avec un chauffeur privé.
 category: transfert-aeroport
+image: assets/img/articles/van-novotel.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer devant un hôtel Novotel
 date: 2026-11-20
 ---
 Beaucoup de voyageurs qui atterrissent à Marseille Provence ne vont pas à Marseille, mais à **Aix-en-Provence** : séjour touristique, rendez-vous professionnel, congrès ou étudiants. Le trajet est court, mais il mérite d'être bien préparé.

@@ -2,6 +2,8 @@
 title: Foire de Marseille au Parc Chanot : y aller sans se soucier du stationnement
 description: Chaque automne, la Foire de Marseille attire des foules au Parc Chanot. Nos conseils pour y aller et en revenir sereinement, même en nocturne.
 category: vtc-evenementiel
+image: assets/img/articles/vans-palais-du-pharo.jpg
+image_alt: Vans Mercedes Infinite Transfer devant le palais du Pharo à Marseille
 date: 2026-11-20
 ---
 Rendez-vous incontournable de l'automne, la **Foire internationale de Marseille** se tient chaque année au **Parc Chanot**, dans le 8e arrondissement, près du Rond-Point du Prado. Pendant une dizaine de jours, elle attire des centaines de milliers de visiteurs, et le quartier devient vite saturé.

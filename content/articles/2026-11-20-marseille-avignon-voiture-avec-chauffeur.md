@@ -2,6 +2,8 @@
 title: Marseille – Avignon en voiture avec chauffeur : trajet, durée et conseils
 description: Rejoindre Avignon, sa gare TGV ou le Festival depuis Marseille ou l'aéroport : temps de trajet et avantages d'un transfert en VTC.
 category: vtc-longue-distance
+image: assets/img/articles/van-hotel-europe-avignon.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer devant l'Hôtel d'Europe à Avignon
 date: 2026-11-20
 ---
 Cité des Papes, ville du célèbre **Festival d'Avignon** et porte d'entrée du Vaucluse, Avignon se trouve à une centaine de kilomètres de Marseille. Un trajet assez long pour mériter un vrai confort.

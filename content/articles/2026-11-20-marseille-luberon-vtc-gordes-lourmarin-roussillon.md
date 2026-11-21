@@ -2,6 +2,8 @@
 title: Marseille – Luberon en VTC : rejoindre Gordes, Lourmarin ou Roussillon
 description: Temps de trajet, villages à découvrir et conseils pour rejoindre le Luberon depuis Marseille, l'aéroport ou la gare Aix TGV avec un chauffeur privé.
 category: vtc-longue-distance
+image: assets/img/articles/van-village-perche-provence.jpg
+image_alt: Van Mercedes Classe V Infinite Transfer dans un village perché de Provence
 date: 2026-11-20
 ---
 Le **Luberon** est l'une des destinations les plus prisées de Provence : villages perchés, champs de lavande, marchés colorés et maisons d'hôtes de charme. Mais ses villages sont mal desservis par les transports en commun, et beaucoup de visiteurs arrivent sans voiture.

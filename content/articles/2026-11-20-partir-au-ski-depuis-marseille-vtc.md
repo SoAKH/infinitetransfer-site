@@ -2,6 +2,8 @@
 title: Partir au ski depuis Marseille en VTC : rejoindre les stations des Alpes
 description: Val-Thorens, Serre-Chevalier, Les Orres et d'autres stations : partir au ski depuis Marseille ou l'aéroport avec un chauffeur, skis compris.
 category: vtc-longue-distance
+image: assets/img/articles/van-classe-v-noir-blanc.jpg
+image_alt: Mercedes Classe V Infinite Transfer prête pour un long trajet
 date: 2026-11-20
 ---
 Chaque hiver, de nombreux skieurs atterrissent à Marseille Provence ou partent de la région pour rejoindre les **stations des Alpes**. Avec skis, chaussures et valises, le trajet en transports en commun devient vite compliqué. Un transfert direct en VTC est une option confortable, surtout en famille ou en groupe.
