@@ -407,3 +407,7 @@ a.svc:hover h3{color:#8a6f3c}
 .q-btns{display:flex;flex-wrap:wrap;gap:12px}
 .fld label .opt{text-transform:none;letter-spacing:0;color:var(--gris);font-weight:400;font-size:.78rem}
 .btn[disabled]{opacity:.6;cursor:wait}
+
+.tel-row{display:flex;gap:12px;align-items:flex-end}
+.tel-row select{width:auto;max-width:46%;flex:none}
+.tel-row input{flex:1;min-width:0}

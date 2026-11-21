@@ -60,6 +60,14 @@
   const err = $('err'), res = $('result'), sum = $('summary');
   const ACCESS_KEY = '7a45e768-a1f8-49e4-bf84-8dd053508275'; // Web3Forms : demandes reçues sur infinite.transfer.vtc@gmail.com
   const v = id => $(id).value.trim();
+  // Numéro complet avec indicatif : un numéro saisi avec « + » ou « 00 » est gardé tel quel
+  const fullPhone = () => {
+    const p = v('phone').replace(/[^\d+]/g, '');
+    if (!p) return '';
+    if (p.startsWith('+')) return p;
+    if (p.startsWith('00')) return '+' + p.slice(2);
+    return '+' + $('cc').value + p.replace(/^0/, '');
+  };
   function check(needEmail) {
     const missing = [['from', 'le lieu de prise en charge'], ['to', 'la destination'], ['date', 'la date'], ['time', "l'heure"], ['name', 'votre nom'], ['phone', 'votre téléphone']]
       .filter(([id]) => !v(id)).map(x => x[1]);
@@ -68,7 +76,7 @@
     if (missing.length) { err.textContent = "Merci d'indiquer " + missing.join(', ') + '.'; err.hidden = false; return null; }
     err.hidden = true;
     const dt = new Date(v('date') + 'T00:00').toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-    let txt = `Bonjour, je souhaite un devis pour un transfert.\n\nDépart : ${v('from')}\nDestination : ${v('to')}\nDate : ${dt} à ${v('time')}\nPassagers : ${v('pax')} · Valises : ${v('bags')}\nNom : ${v('name')}\nTéléphone : ${v('phone')}`;
+    let txt = `Bonjour, je souhaite un devis pour un transfert.\n\nDépart : ${v('from')}\nDestination : ${v('to')}\nDate : ${dt} à ${v('time')}\nPassagers : ${v('pax')} · Valises : ${v('bags')}\nNom : ${v('name')}\nTéléphone : ${fullPhone()}`;
     if (v('email')) txt += `\nE-mail : ${v('email')}`;
     if ($('seat').checked) txt += `\nSiège auto : oui`;
     if (v('msg')) txt += `\nPrécisions : ${v('msg')}`;
@@ -86,7 +94,7 @@
     const txt = check(true); if (!txt) { res.classList.remove('show'); return; }
     const btn = $('sendBtn'); btn.disabled = true; const label = btn.firstChild.textContent; btn.firstChild.textContent = 'Envoi en cours… ';
     const data = { access_key: ACCESS_KEY, subject: `Demande de devis - ${v('from')} > ${v('to')} / ${v('date').split('-').reverse().join('/')}`, from_name: 'Site Infinite Transfer',
-      botcheck: $('botcheck').checked, nom: v('name'), telephone: v('phone'), message: txt };
+      botcheck: $('botcheck').checked, nom: v('name'), telephone: fullPhone(), message: txt };
     if (v('email')) data.email = v('email');
     try {
       const r = await fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
