@@ -484,6 +484,27 @@ def build_redirects():
     open(os.path.join(OUT, "_redirects"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
     return len(lines)
 
+def build_404():
+    body = f'''
+<section class="page-hero" style="min-height:60vh">
+  <div class="wrap">
+    <span class="label">Erreur 404</span>
+    <h1>Cette page <em>n'existe pas.</em></h1>
+    <p class="lead">L'adresse demandée est introuvable ou a été déplacée. Retrouvez nos services ci-dessous, ou contactez-nous directement.</p>
+    <div class="ctas">
+      <a class="btn btn-or" href="/">Retour à l'accueil</a>
+      <a class="btn btn-line" href="/contact">Demander un devis</a>
+    </div>
+  </div>
+</section>'''
+    page("404.html", "Page introuvable | Infinite Transfer", "Cette page n'existe pas.", body)
+    # liens absolus : la page 404 peut s'afficher à n'importe quelle profondeur
+    f = os.path.join(OUT, "404.html")
+    doc = open(f, encoding="utf-8").read()
+    doc = re.sub(r'(href|src|action)="(?:\./)?(?!https?:|/|#|tel:|mailto:)([^"]*)"', r'\1="/\2"', doc)
+    doc = doc.replace('="/./', '="/').replace('<head>', '<head>\n<meta name="robots" content="noindex">', 1)
+    open(f, "w", encoding="utf-8").write(doc)
+
 def main():
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
@@ -493,6 +514,7 @@ def main():
     pages = [build_home(arts), build_contact(), build_guide(arts)]
     pages += [build_service(s, arts) for s in SERVICES]
     pages += [build_article(a, arts) for a in arts]
+    build_404()
     lastmod = {f"articles/{a['slug']}.html": a["date"].isoformat() for a in arts}
     urls = "".join(f"<url><loc>{BASE_URL}/{clean(p)}</loc><lastmod>{lastmod.get(p, date.today().isoformat())}</lastmod></url>" for p in pages)
     open(os.path.join(OUT, "sitemap.xml"), "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
