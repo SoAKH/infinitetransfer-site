@@ -1,8 +1,37 @@
 ---
 title: Mentions légales
-description: Informations légales sur l'éditeur et l'hébergeur du site Infinite Transfer.
-updated: 
+description: Informations légales sur l'éditeur et l'hébergeur du site Infinite Transfer, chauffeur privé VTC à Marseille.
+updated: 21 novembre 2026
 ---
-Le texte de cette page est en cours de rédaction et sera publié prochainement.
+## Éditeur du site
 
-Pour toute question, contactez-nous au +33 7 67 12 35 12 ou à contact@infinitetransfer.eu.
+Le site Infinite Transfer est édité par la société **WORK**, **[forme juridique – à compléter]** au capital de **[à compléter]** euros.
+
+- SIRET : 825 329 758 00015
+- Siège social : 4 rue Octave Teissier, 13003 Marseille
+- Numéro d'inscription au registre des VTC : **[à compléter]**
+- Numéro de TVA intracommunautaire : **[à compléter, le cas échéant]**
+- Téléphone : +33 7 67 12 35 12
+- E-mail : contact@infinitetransfer.eu
+
+## Directeur de la publication
+
+M. Sofiane AKHSALE, en qualité de représentant légal de la société WORK.
+
+## Hébergement
+
+Le site est hébergé par Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, États-Unis – www.cloudflare.com.
+
+## Propriété intellectuelle
+
+L'ensemble des contenus de ce site (textes, logo, éléments graphiques, mise en page) est la propriété de la société WORK ou est utilisé avec l'autorisation de leurs titulaires. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite préalable est interdite.
+
+Les marques et visuels des véhicules Mercedes-Benz appartiennent à leurs propriétaires respectifs.
+
+## Données personnelles
+
+Les informations relatives à la collecte et au traitement de vos données personnelles figurent dans notre [politique de confidentialité]({{root}}politique-confidentialite.html). Les conditions applicables à nos prestations figurent dans nos [conditions générales de vente]({{root}}cgv.html).
+
+## Contact
+
+Pour toute question concernant le site, vous pouvez nous écrire à contact@infinitetransfer.eu.

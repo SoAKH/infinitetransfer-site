@@ -5,7 +5,7 @@ updated: 21 novembre 2026
 ---
 ## Article 1. Prestataire
 
-Les prestations sont proposées par **INFINITE TRANSFER**, **[forme juridique – à compléter]** au capital de **[à compléter]** euros, immatriculée sous le numéro SIRET **[à compléter]**, dont le siège social est situé **[adresse – à compléter]**.
+Les prestations sont proposées sous la marque **INFINITE TRANSFER** par la société **WORK**, **[forme juridique – à compléter]** au capital de **[à compléter]** euros, immatriculée sous le numéro SIRET 825 329 758 00015, dont le siège social est situé 4 rue Octave Teissier, 13003 Marseille, représentée par M. Sofiane AKHSALE.
 
 Exploitant de voitures de transport avec chauffeur inscrit au registre des VTC sous le numéro **[à compléter]**. Numéro de TVA intracommunautaire : **[à compléter, le cas échéant]**.
 
