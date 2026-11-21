@@ -5,11 +5,13 @@ updated: 21 novembre 2026
 ---
 ## Éditeur du site
 
-Le site Infinite Transfer est édité par la société **WORK**, société par actions simplifiée unipersonnelle (SASU).
+Le site Infinite Transfer est édité par la société **WORK**, société par actions simplifiée unipersonnelle (SASU) au capital de 2 000 €.
 
-- SIRET : 825 329 758 00015
+- SIREN : 825 329 758 – SIRET : 825 329 758 00015
+- Code APE : 49.32Z – Transports de voyageurs par taxis
 - Siège social : 4 rue Octave Teissier, 13003 Marseille
-- Numéro d'inscription au registre des VTC : EVTC013220185
+- Inscription au registre des exploitants de VTC (Direction générale des infrastructures, des transports et de la mer) : EVTC013220185
+- Carte professionnelle de conducteur VTC n° 01317015302, délivrée par la Préfecture des Bouches-du-Rhône
 - Téléphone : +33 7 67 12 35 12
 - E-mail : contact@infinitetransfer.eu
 

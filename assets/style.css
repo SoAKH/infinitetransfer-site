@@ -1,3 +1,15 @@
+/* Polices hébergées sur le site (aucun appel à Google Fonts) */
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/cormorant-garamond-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:400;font-display:swap;src:url("fonts/cormorant-garamond-latin-400-italic.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:500;font-display:swap;src:url("fonts/cormorant-garamond-latin-500-italic.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2")}
+@font-face{font-family:"Cormorant Garamond";font-style:italic;font-weight:600;font-display:swap;src:url("fonts/cormorant-garamond-latin-600-italic.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:300;font-display:swap;src:url("fonts/manrope-latin-300-normal.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/manrope-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/manrope-latin-500-normal.woff2") format("woff2")}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/manrope-latin-600-normal.woff2") format("woff2")}
+
 /* Layout : alternance de sections noir profond et ivoire, filets dorés fins, angles droits, grille éditoriale à 12 colonnes */
 :root{
   --noir:#0c0c0d;        /* fond principal sombre */
@@ -385,3 +397,8 @@ a.svc:hover h3{color:#8a6f3c}
 .prose.legal{max-width:80ch}
 .prose.legal h2{font-size:clamp(1.5rem,2.4vw,1.9rem);margin:44px 0 14px}
 .prose.legal h3{font-size:1.25rem}
+
+.table-wrap{overflow-x:auto;margin:0 0 22px}
+.prose table{border-collapse:collapse;width:100%;font-size:.95rem}
+.prose th,.prose td{text-align:left;padding:12px 14px;border-bottom:1px solid #d6d0c4;vertical-align:top}
+.prose th{font-weight:600;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#7a5f2e}

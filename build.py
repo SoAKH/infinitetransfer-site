@@ -60,8 +60,20 @@ def markdown(src):
         if lst:
             tag, items = lst
             out.append(f"<{tag}>" + "".join(f"<li>{inline(i)}</li>" for i in items) + f"</{tag}>"); lst = None
+    table = []
+    def flush_table():
+        nonlocal table
+        if table:
+            rows = [[c.strip() for c in r.strip().strip("|").split("|")] for r in table if not re.match(r"^\|?\s*:?-{3,}", r.strip())]
+            head, rest = rows[0], rows[1:]
+            out.append('<div class="table-wrap"><table><thead><tr>' + "".join(f"<th>{inline(c)}</th>" for c in head) + "</tr></thead><tbody>"
+                       + "".join("<tr>" + "".join(f"<td>{inline(c)}</td>" for c in r) + "</tr>" for r in rest) + "</tbody></table></div>")
+            table = []
     for line in src.splitlines():
         l = line.strip()
+        if l.startswith("|"):
+            flush(); table.append(l); continue
+        flush_table()
         if not l:
             flush(); continue
         m = re.match(r"(#{2,3})\s+(.*)", l)
@@ -78,7 +90,7 @@ def markdown(src):
             lst[1].append(m.group(2)); continue
         if lst: flush()
         para.append(l)
-    flush()
+    flush(); flush_table()
     return "\n".join(out)
 
 # ——— Articles ———
@@ -198,9 +210,8 @@ def page(path, title, description, body, current="", jsonld=None, image=None):
 <meta property="og:image" content="{BASE_URL}/{image or "assets/img/og-image.jpg"}">
 <link rel="icon" type="image/png" sizes="32x32" href="{root}assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="{root}assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="{root}assets/fonts/cormorant-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{root}assets/fonts/manrope-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{root}assets/style.css">
 {ld}
 </head>

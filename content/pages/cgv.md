@@ -5,7 +5,7 @@ updated: 21 novembre 2026
 ---
 ## Article 1. Prestataire
 
-Les prestations sont proposées sous la marque **INFINITE TRANSFER** par la société **WORK**, société par actions simplifiée unipersonnelle (SASU), immatriculée sous le numéro SIRET 825 329 758 00015, dont le siège social est situé 4 rue Octave Teissier, 13003 Marseille, représentée par M. Sofiane AKHSALE.
+Les prestations sont proposées sous la marque **INFINITE TRANSFER** par la société **WORK**, société par actions simplifiée unipersonnelle (SASU) au capital de 2 000 €, immatriculée sous le numéro SIRET 825 329 758 00015, dont le siège social est situé 4 rue Octave Teissier, 13003 Marseille, représentée par M. Sofiane AKHSALE.
 
 Exploitant de voitures de transport avec chauffeur inscrit au registre des VTC sous le numéro EVTC013220185.
 
