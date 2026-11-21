@@ -33,3 +33,6 @@ et l'indiquer dans l'en-tête de l'article (`image:` et `image_alt:` avec une de
 | van-hotel-le-prieure.jpg | Van devant l'hôtel Le Prieuré |
 | flotte-vans-mercedes.jpg | Rangée de véhicules Mercedes |
 | deux-vans-mercedes.jpg | Deux vans Mercedes Classe V |
+| van-champ-lavande-valensole.jpg | Van Classe V devant un champ de lavande, plateau de Valensole |
+| classe-s-bord-de-mer.jpg | Mercedes Classe S au bord de la mer |
+| classe-s-interieur-cuir.jpg | Intérieur cuir matelassé de la Classe S, places arrière |
