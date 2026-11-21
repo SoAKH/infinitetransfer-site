@@ -8,7 +8,7 @@ et l'indiquer dans l'en-tête de l'article (`image:` et `image_alt:` avec une de
 |---|---|
 | van-aeroport-marseille-provence.jpg | Vans Classe V devant l'aviation générale de l'aéroport Marseille Provence |
 | van-nuit-marseille.jpg | Van Classe V de nuit dans une rue de Marseille |
-| van-novotel.jpg | Van Classe V devant un hôtel Novotel |
+| van-novotel.jpg | Van Classe V devant le Novotel d'Avignon |
 | interieur-classe-v-sieges.jpg | Intérieur d'une Classe V, sièges passagers (noir et blanc) |
 | van-gare-saint-charles.jpg | Van Classe V devant la gare Saint-Charles |
 | van-bastide-provence.jpg | Van Classe V devant une bastide provençale |
