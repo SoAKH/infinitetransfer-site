@@ -5,12 +5,11 @@ updated: 21 novembre 2026
 ---
 ## Éditeur du site
 
-Le site Infinite Transfer est édité par la société **WORK**, **[forme juridique – à compléter]** au capital de **[à compléter]** euros.
+Le site Infinite Transfer est édité par la société **WORK**, société par actions simplifiée unipersonnelle (SASU).
 
 - SIRET : 825 329 758 00015
 - Siège social : 4 rue Octave Teissier, 13003 Marseille
-- Numéro d'inscription au registre des VTC : **[à compléter]**
-- Numéro de TVA intracommunautaire : **[à compléter, le cas échéant]**
+- Numéro d'inscription au registre des VTC : EVTC013220185
 - Téléphone : +33 7 67 12 35 12
 - E-mail : contact@infinitetransfer.eu
 
