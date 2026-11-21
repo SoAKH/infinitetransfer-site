@@ -21,12 +21,15 @@ from datetime import date
 from services import SERVICES
 from reviews import REVIEWS, RATING, COUNT
 
-BASE_URL = "https://www.infinitetransfer.eu"   # adresse définitive du site
+# Adresse publique du site. Sur Cloudflare Pages, la variable SITE_URL (réglages du projet) la définit,
+# par exemple https://www.mondomaine.fr ; à défaut, l'adresse définitive infinitetransfer.eu est utilisée.
+BASE_URL = os.environ.get("SITE_URL", "https://www.infinitetransfer.eu").rstrip("/")
 GMB_URL = "https://maps.app.goo.gl/dCqBWjs9cmoYXrDV7"   # fiche Google Business Profile
 HERE = os.path.dirname(os.path.abspath(__file__))
 # Sur Netlify, URL = adresse principale du site. Tant que ce n'est pas infinitetransfer.eu
 # (adresse provisoire *.netlify.app), les pages sont masquées à Google pour éviter le contenu en double.
-NOINDEX = bool(os.environ.get("NETLIFY")) and "infinitetransfer.eu" not in os.environ.get("URL", "")
+NOINDEX = (bool(os.environ.get("NETLIFY")) and "infinitetransfer.eu" not in os.environ.get("URL", "")) \
+    or (bool(os.environ.get("CF_PAGES")) and not os.environ.get("SITE_URL"))
 OUT = os.path.join(HERE, "public")
 SVC = {s["slug"]: s for s in SERVICES}
 MOIS = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"]
@@ -461,8 +464,8 @@ def build_redirects():
     for l in open(os.path.join(HERE, "old_urls.txt"), encoding="utf-8"):
         l = l.strip()
         if l and not l.startswith("#"):
-            lines.append(f"{l}  {old_target(l)}  301!")
-    lines += ["/archives-*  /guide.html  301!", "/details-*  /guide.html  301!"]
+            lines.append(f"{l}  {old_target(l)}  301")
+    lines += ["/archives-*  /guide.html  301", "/details-*  /guide.html  301"]
     open(os.path.join(OUT, "_redirects"), "w", encoding="utf-8").write("\n".join(lines) + "\n")
     return len(lines)
 
@@ -478,6 +481,7 @@ def main():
     lastmod = {f"articles/{a['slug']}.html": a["date"].isoformat() for a in arts}
     urls = "".join(f"<url><loc>{BASE_URL}/{'' if p == 'index.html' else p}</loc><lastmod>{lastmod.get(p, date.today().isoformat())}</lastmod></url>" for p in pages)
     open(os.path.join(OUT, "sitemap.xml"), "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
+    open(os.path.join(OUT, "_headers"), "w").write("https://:project.pages.dev/*\n  X-Robots-Tag: noindex\n")
     open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n")
     nred = build_redirects()
     print(f"{nred} redirections")
