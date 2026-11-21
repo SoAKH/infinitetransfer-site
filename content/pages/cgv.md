@@ -3,13 +3,21 @@ title: Conditions générales de vente
 description: Conditions générales de vente des prestations de transport avec chauffeur Infinite Transfer : réservation, paiement, annulation, responsabilités.
 updated: 21 novembre 2026
 ---
-## Article 1. Objet – Champ d'application
+## Article 1. Prestataire
 
-Les présentes Conditions Générales de Vente s'appliquent de plein droit à nos relations commerciales avec nos Clients. Toute commande passée par nos Clients implique, à titre de condition essentielle et déterminante, l'acceptation sans réserve desdites conditions. Les présentes Conditions Générales de Vente prévalent sur toutes conditions d'achat, sauf dérogation expresse de INFINITE TRANSFER.
+Les prestations sont proposées par **INFINITE TRANSFER**, **[forme juridique – à compléter]** au capital de **[à compléter]** euros, immatriculée sous le numéro SIRET **[à compléter]**, dont le siège social est situé **[adresse – à compléter]**.
+
+Exploitant de voitures de transport avec chauffeur inscrit au registre des VTC sous le numéro **[à compléter]**. Numéro de TVA intracommunautaire : **[à compléter, le cas échéant]**.
+
+Contact : +33 7 67 12 35 12 – contact@infinitetransfer.eu.
+
+## Article 2. Objet – Champ d'application
+
+Les présentes Conditions Générales de Vente s'appliquent de plein droit à nos relations commerciales avec nos Clients, qu'ils soient particuliers (consommateurs) ou professionnels. Toute commande passée par nos Clients implique l'acceptation des présentes conditions. Les présentes Conditions Générales de Vente prévalent sur toutes conditions d'achat, sauf dérogation expresse de INFINITE TRANSFER.
 
 Aucune tolérance par INFINITE TRANSFER, de quelque nature, importance, durée, fréquence qu'elle soit, ne pourra être créatrice de droit ou valoir renonciation à se prévaloir ultérieurement de l'une de ces conditions.
 
-## Article 2. Pièces contractuelles
+## Article 3. Pièces contractuelles
 
 Les pièces constitutives de la relation contractuelle sont :
 
@@ -18,42 +26,58 @@ Les pièces constitutives de la relation contractuelle sont :
 - les présentes Conditions Générales de Vente ;
 - à titre supplétif, les documents du Client en ce qu'ils ne sont pas contraires aux conditions particulières du contrat.
 
-Chaque pièce prévaut sur la suivante dans l'ordre indiqué dans le contrat, et à défaut d'une telle indication, dans celui indiqué au présent article 2. Conformément aux obligations légales, les pièces sont rédigées en langue française.
+Chaque pièce prévaut sur la suivante dans l'ordre indiqué dans le contrat, et à défaut d'une telle indication, dans celui indiqué au présent article. Conformément aux obligations légales, les pièces sont rédigées en langue française.
 
-## Article 3. Contenu de la prestation
+## Article 4. Contenu de la prestation
 
 INFINITE TRANSFER met à la disposition de ses clients : un véhicule avec chauffeur selon les modalités incluses dans le bon de commande, le carburant nécessaire à la réalisation du parcours, le transport des bagages et les péages, l'assurance des personnes transportées.
 
-## Article 4. Les tarifs
+## Article 5. Les tarifs
 
-INFINITE TRANSFER tient à la disposition des clients le tarif général des prestations. Ces tarifs sont majorés de la Taxe sur la Valeur Ajoutée (T.V.A.) au taux en vigueur applicable à la nature de la prestation.
+Le prix de chaque prestation est fixé lors de la réservation et confirmé par écrit dans le devis. Il ne varie pas en fonction de la circulation ou de l'itinéraire emprunté, sauf modification de la prestation demandée par le Client (arrêt supplémentaire, changement de destination, attente prolongée).
 
-## Article 5. Les paiements
+Pour les clients particuliers, les prix sont indiqués en euros toutes taxes comprises (TTC). Pour les clients professionnels, les prix peuvent être indiqués hors taxes (HT) et sont alors majorés de la Taxe sur la Valeur Ajoutée (T.V.A.) au taux en vigueur.
 
-Toute commande, pour être validée, doit être accompagnée d'un minimum de 30 % du montant du devis. Le solde est payable au chauffeur à la fin de la prestation, en espèces, par carte bancaire ou par virement.
+## Article 6. Réservation et paiement
 
-## Article 6. Annulation
+Toute commande, pour être validée, doit être accompagnée du versement d'un acompte d'un minimum de 30 % du montant du devis. Le solde est payable au chauffeur à la fin de la prestation, en espèces, par carte bancaire ou par virement.
 
-En cas d'annulation pour des services en berlines et vans, INFINITE TRANSFER se réserve le droit de facturer les minima suivants : 100 % de la prestation en cas d'annulation à moins de 48 heures du début de la prestation.
+## Article 7. Annulation et absence du client
+
+En cas d'annulation pour des services en berlines et vans, INFINITE TRANSFER se réserve le droit de facturer 100 % de la prestation en cas d'annulation à moins de 48 heures du début de la prestation.
 
 Si la réservation est effectuée moins de 48 heures avant la date et l'heure de prise en charge, en cas d'annulation de celle-ci, INFINITE TRANSFER se réserve le droit de facturer 100 % de la prestation.
 
 Dans tous les cas, l'absence du client à la date et à l'heure convenues du rendez-vous entraîne la perception totale de la commande.
 
-## Article 7. Respect des règlements et de la sécurité
+## Article 8. Absence de droit de rétractation
+
+Conformément au Code de la consommation, le droit de rétractation prévu pour les contrats conclus à distance ne s'applique pas aux services de transport de passagers. Les conditions d'annulation applicables sont celles prévues à l'article 7.
+
+## Article 9. Respect des règlements et de la sécurité
 
 Les collaborateurs de INFINITE TRANSFER sont tenus au respect des règles en vigueur, notamment en ce qui concerne la conduite des véhicules. Aucune dérogation ne peut être admise au respect de ces règles.
 
 Les clients sont tenus, par ailleurs, au respect des mêmes règles, et toute attitude contraire qui pourrait engendrer un sinistre ou une dégradation du véhicule sera mise à la charge dudit client.
 
-## Article 8. Force majeure
+## Article 10. Force majeure
 
-INFINITE TRANSFER ne pourra être tenue responsable de l'inexécution ou de tout autre manquement à ses obligations contractuelles, dès lors que cette défaillance résultera d'une cause étrangère de force majeure. Est considéré comme une cause étrangère de force majeure tout événement irrésistible, imprévisible et extérieur au sens de l'article 1148 du Code civil.
+INFINITE TRANSFER ne pourra être tenue responsable de l'inexécution ou de tout autre manquement à ses obligations contractuelles, dès lors que cette défaillance résultera d'un cas de force majeure au sens de l'article 1218 du Code civil, c'est-à-dire d'un événement échappant à son contrôle, qui ne pouvait être raisonnablement prévu lors de la conclusion du contrat et dont les effets ne peuvent être évités par des mesures appropriées.
 
-## Article 9. Informatique et libertés
+## Article 11. Données personnelles
 
-Les informations nominatives concernant le Client font l'objet de traitements de données qui ont été déclarés à la C.N.I.L. Ces informations sont réservées à l'usage exclusif de INFINITE TRANSFER. Le Client dispose d'un droit d'accès et de modification des données qui le concernent (article 34 de la loi informatique et libertés du 6 janvier 1978).
+Les informations personnelles communiquées par le Client (nom, coordonnées, détails du trajet) sont utilisées par INFINITE TRANSFER uniquement pour la gestion des réservations, la réalisation des prestations et la facturation. Elles ne sont ni vendues ni cédées à des tiers.
 
-## Article 10. Litiges
+Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, le Client dispose d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition au traitement de ses données, qu'il peut exercer en écrivant à contact@infinitetransfer.eu. Il peut également introduire une réclamation auprès de la CNIL. Pour plus d'informations, consultez notre [politique de confidentialité]({{root}}politique-confidentialite.html).
 
-Pour tout litige pouvant naître de la relation entre INFINITE TRANSFER et le client, le Tribunal de Commerce d'Aix-en-Provence sera le seul compétent.
+## Article 12. Réclamations et médiation
+
+Toute réclamation doit être adressée par écrit à INFINITE TRANSFER, de préférence par e-mail à contact@infinitetransfer.eu.
+
+Conformément au Code de la consommation, en cas de litige non résolu à l'amiable, le Client consommateur peut recourir gratuitement au médiateur de la consommation dont relève INFINITE TRANSFER : **[nom du médiateur – à compléter]**, **[adresse postale et site internet – à compléter]**.
+
+## Article 13. Droit applicable et litiges
+
+Les présentes Conditions Générales de Vente sont soumises au droit français.
+
+Pour les litiges avec un Client professionnel, le Tribunal de Commerce d'Aix-en-Provence sera seul compétent. Pour les litiges avec un Client consommateur, la juridiction compétente est déterminée selon les règles de droit commun.
