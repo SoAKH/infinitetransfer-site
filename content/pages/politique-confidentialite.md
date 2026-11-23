@@ -9,7 +9,7 @@ La présente politique explique quelles données personnelles nous collectons, p
 
 Le responsable du traitement est la société **WORK**, SASU au capital de 2 000 €, exploitant la marque Infinite Transfer, SIRET 825 329 758 00015, dont le siège est situé 4 rue Octave Teissier, 13003 Marseille, représentée par M. Sofiane AKHSALE.
 
-Pour toute question relative à vos données : contact@infinitetransfer.eu ou +33 7 67 12 35 12.
+Pour toute question relative à vos données : {{email}} ou +33 7 67 12 35 12.
 
 ## Les données que nous collectons
 
@@ -83,7 +83,7 @@ Vous disposez des droits suivants sur vos données :
 - droit à la portabilité ;
 - droit de définir des directives relatives au sort de vos données après votre décès.
 
-Pour exercer ces droits, écrivez-nous à contact@infinitetransfer.eu ou au 4 rue Octave Teissier, 13003 Marseille. Nous vous répondrons dans un délai d'un mois.
+Pour exercer ces droits, écrivez-nous à {{email}} ou au 4 rue Octave Teissier, 13003 Marseille. Nous vous répondrons dans un délai d'un mois.
 
 Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL (www.cnil.fr).
 

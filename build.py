@@ -24,6 +24,8 @@ from reviews import REVIEWS, RATING, COUNT
 # Adresse publique du site. Sur Cloudflare Pages, la variable SITE_URL (réglages du projet) la définit,
 # par exemple https://www.mondomaine.fr ; à défaut, l'adresse définitive infinitetransfer.eu est utilisée.
 BASE_URL = os.environ.get("SITE_URL", "https://www.infinitetransfer.eu").rstrip("/")
+# Adresse e-mail affichée sur le site. Remettre contact@infinitetransfer.eu une fois le nom de domaine récupéré.
+CONTACT_EMAIL = "infinite.transfer.vtc@gmail.com"
 GMB_URL = "https://maps.app.goo.gl/dCqBWjs9cmoYXrDV7"   # fiche Google Business Profile
 HERE = os.path.dirname(os.path.abspath(__file__))
 # Sur Netlify, URL = adresse principale du site. Tant que ce n'est pas infinitetransfer.eu
@@ -126,7 +128,7 @@ WA_ICON = '<svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" a
 
 ORG = {"@type": "LocalBusiness", "@id": BASE_URL + "/#entreprise", "name": "Infinite Transfer",
        "description": "Chauffeur privé VTC à Marseille et en Provence : transferts aéroport, gares, port de croisière, événements, affaires.",
-       "url": BASE_URL + "/", "telephone": "+33767123512", "email": "contact@infinitetransfer.eu",
+       "url": BASE_URL + "/", "telephone": "+33767123512", "email": CONTACT_EMAIL,
        "areaServed": ["Marseille", "Aix-en-Provence", "Provence-Alpes-Côte d'Azur"],
        "logo": BASE_URL + "/assets/img/icon-512.png", "image": BASE_URL + "/assets/img/og-image.jpg",
        "sameAs": ["https://www.instagram.com/infinite.transfer/", GMB_URL], "priceRange": "€€"}
@@ -166,7 +168,7 @@ def footer(root):
         <p style="max-width:28em">Chauffeur privé VTC haut de gamme à Marseille et en Provence. Transferts aéroport, gares, croisières, affaires et événements.</p>
       </div>
       <div><h4>Services</h4><ul>{svc}</ul></div>
-      <div><h4>Contact</h4><ul><li><a href="tel:+33767123512">+33 7 67 12 35 12</a></li><li><a href="mailto:contact@infinitetransfer.eu">contact@infinitetransfer.eu</a></li><li><a href="{root}contact.html">Demander un devis</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="tel:+33767123512">+33 7 67 12 35 12</a></li><li><a href="mailto:{{email}}">{{email}}</a></li><li><a href="{root}contact.html">Demander un devis</a></li></ul></div>
       <div><h4>Infos</h4><ul><li><a href="{root}guide.html">Le guide</a></li><li><a href="https://www.instagram.com/infinite.transfer/">Instagram</a></li><li><a href="https://www.facebook.com/">Facebook</a></li><li><a href="{GMB_URL}">Nos avis Google</a></li></ul></div>
     </div>
     <div class="legal">
@@ -229,7 +231,7 @@ def page(path, title, description, body, current="", jsonld=None, image=None):
 </body>
 </html>
 '''
-    doc = clean_links(doc)
+    doc = clean_links(doc).replace("{{email}}", CONTACT_EMAIL)
     dest = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     open(dest, "w", encoding="utf-8").write(doc)

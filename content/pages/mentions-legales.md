@@ -13,7 +13,7 @@ Le site Infinite Transfer est édité par la société **WORK**, société par a
 - Inscription au registre des exploitants de VTC (Direction générale des infrastructures, des transports et de la mer) : EVTC013220185
 - Carte professionnelle de conducteur VTC n° 01317015302, délivrée par la Préfecture des Bouches-du-Rhône
 - Téléphone : +33 7 67 12 35 12
-- E-mail : contact@infinitetransfer.eu
+- E-mail : {{email}}
 
 ## Directeur de la publication
 
@@ -35,4 +35,4 @@ Les informations relatives à la collecte et au traitement de vos données perso
 
 ## Contact
 
-Pour toute question concernant le site, vous pouvez nous écrire à contact@infinitetransfer.eu.
+Pour toute question concernant le site, vous pouvez nous écrire à {{email}}.

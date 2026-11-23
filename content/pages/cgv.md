@@ -9,7 +9,7 @@ Les prestations sont proposées sous la marque **INFINITE TRANSFER** par la soci
 
 Exploitant de voitures de transport avec chauffeur inscrit au registre des VTC sous le numéro EVTC013220185.
 
-Contact : +33 7 67 12 35 12 – contact@infinitetransfer.eu.
+Contact : +33 7 67 12 35 12 – {{email}}.
 
 ## Article 2. Objet – Champ d'application
 
@@ -68,11 +68,11 @@ INFINITE TRANSFER ne pourra être tenue responsable de l'inexécution ou de tout
 
 Les informations personnelles communiquées par le Client (nom, coordonnées, détails du trajet) sont utilisées par INFINITE TRANSFER uniquement pour la gestion des réservations, la réalisation des prestations et la facturation. Elles ne sont ni vendues ni cédées à des tiers.
 
-Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, le Client dispose d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition au traitement de ses données, qu'il peut exercer en écrivant à contact@infinitetransfer.eu. Il peut également introduire une réclamation auprès de la CNIL. Pour plus d'informations, consultez notre [politique de confidentialité]({{root}}politique-confidentialite.html).
+Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, le Client dispose d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition au traitement de ses données, qu'il peut exercer en écrivant à {{email}}. Il peut également introduire une réclamation auprès de la CNIL. Pour plus d'informations, consultez notre [politique de confidentialité]({{root}}politique-confidentialite.html).
 
 ## Article 12. Réclamations et médiation
 
-Toute réclamation doit être adressée par écrit à INFINITE TRANSFER, de préférence par e-mail à contact@infinitetransfer.eu.
+Toute réclamation doit être adressée par écrit à INFINITE TRANSFER, de préférence par e-mail à {{email}}.
 
 Conformément au Code de la consommation, en cas de litige non résolu à l'amiable, le Client consommateur peut recourir gratuitement au médiateur de la consommation dont relève INFINITE TRANSFER : **[nom du médiateur – à compléter]**, **[adresse postale et site internet – à compléter]**.
 
